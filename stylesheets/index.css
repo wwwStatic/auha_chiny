@@ -1,0 +1,38 @@
+*{margin:0; border:none; padding:0; font-size: 1.45vw; font-family:'Amatic SC', cursive; box-sizing: border-box;}
+ul,li{list-style-type: none;}
+html{
+	background-color: aquamarine;
+}
+body{
+	text-align: center;
+	padding-bottom: 5vw;
+}
+body h1{
+	font-size: 400%;
+	color: #660066;
+	padding: 2vw 0 1vw;
+}
+p{
+	font-size: 150%;
+	padding: 1vw 3vw;
+}
+#menu{
+	margin: 2vw 0;
+}
+#menu li{
+	display: inline;
+}
+#menu a{
+	font-size: 150%;
+	text-decoration: none;
+	color: blue;
+	padding: 0 2vw;
+}
+#menu a:hover{
+	color: #e600e6;
+}
+img{
+	width: 40vw;
+	display: inline-block;
+	margin: 2.5vw;
+}

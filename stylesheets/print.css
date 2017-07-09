@@ -1,0 +1,27 @@
+*{
+	font-family: "Comic Sans MS", sans-serif;
+	font-size: 100%;
+}
+.print{
+	display: block;
+}
+.downloads{
+	display: none;
+}
+h1{
+	font-size: 150%;
+}
+body{
+	padding: 3vw 5vw;
+}
+body.html.index div, body.html.index form, body.html.index img{
+	display: none;
+}
+body.html.index ol{
+	font-size: 133%;
+	line-height: 150%;
+	padding-left: 2.5vw;
+}
+body.html.index ol#plans{
+	display: block;
+}

@@ -1,0 +1,26 @@
+html, body.image{
+  background-color: #93cDdF;
+}
+body.image #menu, body.image #submenu{
+  background-color: #c8f5ff; /* darker blue */
+}
+body.image .nana li{
+	clear: both;
+}
+body.image .nana li a{
+	width: 20vw;
+	margin-bottom: 1vw;
+	display: inline-block;
+}
+body.image .nana li a:visited{
+	color: blue;
+}
+body.image .nana li span{
+	width: 75vw;
+	font-size: 80%;
+	margin-top: 0.33vw;
+	margin-bottom: 0.67vw;
+	display: inline-block;
+	float: right;
+}
+

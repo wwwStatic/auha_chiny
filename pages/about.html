@@ -1,0 +1,137 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+  <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+  <meta name="author" content="wwwebsites" />
+  <meta name="copyright" content="2016, wwwebsites" />
+  <title>About Me</title>
+  <link rel="stylesheet" media="all" href="../stylesheets/shared.css" />
+  <script src="../javascripts/include.js"></script>
+  <style>
+	  html, body.orange{
+	  	text-align: center;
+	  	background-color: #FDA428; /* orange */
+	  }
+		body.orange{
+			position: relative;
+		}
+	  body.orange #menu, body.orange #submenu{
+		  background-color: #Ffb438; /* lighter orange */
+	  }
+	  body.orange img{
+	  	height: 50vw;
+	  }
+		body.orange #slide-show{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+	  body.orange .arrow i{
+	  	font-size: 800%;
+	  	color: purple;
+	  	cursor: pointer;
+	  }
+	  body.orange .arrow i:hover{
+	  	color: pink;
+	  }
+  </style>
+</head>
+
+<body class="orange">
+
+<!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
+
+  <div w3-include-html="menu.html"></div>
+  <div w3-include-html="menu_about.html"></div>
+	<script>
+	w3.includeHTML();
+	</script>
+
+<!-- ***** SLIDESHOW ***** SLIDESHOW ***** SLIDESHOW ***** SLIDESHOW ***** -->
+
+	<div id="slide-show">
+
+		<div id="prevArrow" class="arrow">
+			<i class="fa fa-angle-double-left"></i>
+		</div>
+			
+		<img src="../images/about/slideshow-baby.jpg" />
+		
+		<div id="nextArrow" class="arrow">
+			<i class="fa fa-angle-double-right"></i>
+		</div>
+	
+	</div>
+
+
+<script>
+/*****************************************/
+/*** First we need to set ourselves up ***/
+/*****************************************/
+
+const photos = ["slideshow-baby.jpg", "slideshow-toddler.jpg", "slideshow-pre-school.jpg", "slideshow-now.jpg", "slideshow-easter.jpg", "slideshow-siblings.jpg"];
+const firstPhoto = photos[0];
+var visiblePhoto;
+var photoName;
+var index;
+
+const next = document.querySelector("#nextArrow i");
+const prev = document.querySelector("#prevArrow i");
+
+getPhotoInfo();
+displayPhoto(firstPhoto);
+
+/*********************************************/
+/*** Clicking the next and previous arrows ***/
+/*********************************************/
+
+next.addEventListener("click", nextPhoto);
+prev.addEventListener("click", prevPhoto);
+
+function nextPhoto(){
+	getPhotoInfo();
+	if(index<photos.length-1){
+		var nextPhoto = photos[index+1];
+	}else{
+		nextPhoto = photos[0]
+	}
+	displayPhoto(nextPhoto);
+}
+function prevPhoto(){
+	getPhotoInfo();
+	if(index>0){
+		var prevPhoto = photos[index-1];
+	}else{
+		prevPhoto = photos[photos.length-1]
+	}
+	displayPhoto(prevPhoto);
+}
+
+/*********************************************/
+/*** DRY (don't repeat yourself) functions ***/
+/*********************************************/
+
+function getPhotoInfo(){
+	visiblePhoto = document.querySelector("img");
+	photoName = visiblePhoto.src.split(/\//).pop();
+	index = photos.indexOf(photoName);
+}
+function displayPhoto(photo){
+	visiblePhoto.src = "../images/about/"+photo;
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+

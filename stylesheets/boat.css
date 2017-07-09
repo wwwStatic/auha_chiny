@@ -1,0 +1,65 @@
+body.border_challenge #math{
+	width: 200px;
+	font-size: 250%;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+	color: red;
+	background-color: purple;
+	margin: 100px auto;
+	padding: 10px;
+	border: 10px ridge orange;
+}
+body.border_challenge #math a{
+	font-size: 100%;
+	font-weight: bold;
+	text-decoration: underline;
+	color: red;
+}
+body.border_challenge #math a:hover{
+	color: blue;
+}
+
+body.border_challenge #science{
+	font-size: 250%;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	text-align: center;
+	color: purple;
+	background-color: red;
+	margin: 100px auto;
+	padding: 10px;
+	border: 10px dotted yellow;
+}
+body.border_challenge #music{
+	width: 400px;
+	height: 200px;
+	font-size: 250%;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	text-align: center;
+	color: orange;
+	background-color: blue;
+	margin: 100px auto;
+	padding: 10px;
+	border: 10px dashed black;
+	border-radius: 50px;
+}
+body.border_challenge #london{
+	width: 200px;
+	height: 200px;
+	font-size: 250%;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+	text-align: center;
+	color: orange;
+	background-color: brown;
+	margin: 100px auto;
+	padding: 40px 10px;
+	border: 20px dotted pink;
+	border-radius: 200px;
+}
+

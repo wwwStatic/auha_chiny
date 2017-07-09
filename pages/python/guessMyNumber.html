@@ -1,0 +1,97 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+  <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+  <meta name="author" content="wwwebsites" />
+  <meta name="copyright" content="2016, wwwebsites" />
+  <title>Hermione's Python Page 'Guess My Number'</title>
+  <link rel="stylesheet" media="all" href="../../stylesheets/shared.css" />
+  <link rel="stylesheet" media="all" href="../../stylesheets/python.css" />
+  <script src="../../javascripts/include.js"></script>
+  <style>
+	</style>
+</head>
+
+<body class="python">
+
+<!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
+
+  <div w3-include-html="menu.html"></div>
+  <div w3-include-html="menu_python.html"></div>
+	<script>
+	w3.includeHTML();
+	</script>
+
+<!-- ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** -->
+
+<div class="nana">
+	<p>Hi Hermione, I have written some worksheets for you. I hope you enjoy them. 
+		<br />They are about the programme we wrote, "guess my number"...
+		<br />You can print them out.</p>
+
+  <br />
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber.pdf" target="_blank">All worksheets in one document (for printing).</a></p>
+	<br />
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-1.pdf" target="_blank">Worksheet 1 (Variables)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-2.pdf" target="_blank">Worksheet 2 (Variables)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-3.pdf" target="_blank">Worksheet 3 (Functions)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-4.pdf" target="_blank">Worksheet 4 (Methods)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-5.pdf" target="_blank">Worksheet 5 (Booleans)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-6.pdf" target="_blank">Worksheet 6 (Blocks)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-7.pdf" target="_blank">Worksheet 7 (Types)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-8.pdf" target="_blank">Worksheet 8 (Type conversion)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-9.pdf" target="_blank">Worksheet 9 (Modules)</a></p>
+	<p><a href="/pages/python/guessMyNumber/guessMyNumber-10.pdf" target="_blank">Worksheet 10 (Loops)</a></p>
+	
+	<p>
+		<br />Below the code again (It is also on each worksheet). It is from chapter 4 of <a href="http://inventwithpython.com" target="_blank">"Invent Your Own Computer Games with Python" by Al Sweigart</a>. 
+		<br /><br />
+	</p>
+	
+<pre>
+import random
+
+guessesTaken=0
+
+print("hello! what is your name?")
+myName=input()
+
+number=random.randint(1,20)
+print("well, " +myName+ ", I am thinking of a number between one and twenty.")
+
+while guessesTaken<6:
+    print("take a guess.")
+    guess=input()
+    guess=int(guess)
+ 
+    guessesTaken=guessesTaken+1
+
+    if guess&lt;number:
+        print("your guess is too low.")
+    
+    if guess&gt;number:
+        print("guess is too high.")
+    
+    if guess==number:
+        break
+    
+if guess==number:
+    guessesTaken=str(guessesTaken)
+    print("good job, " +myName+ "! you guessed my number in " +guessesTaken+ " guesses!")
+
+if guess!=number:
+    number=str(number)
+    print("nope. The number I was thinking of was " +number)
+		
+</pre>
+</div>
+
+</body>
+</html>

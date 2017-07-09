@@ -1,0 +1,145 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+  <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+  <meta name="author" content="wwwebsites" />
+  <meta name="copyright" content="2016, wwwebsites" />
+  <title>Hermione's HTML Pages</title>
+  <link rel="stylesheet" media="screen" href="../stylesheets/shared.css" />
+  <link rel="stylesheet" media="screen" href="../stylesheets/html.css" />
+	<link rel="stylesheet" media="print" href="../stylesheets/print.css" />
+  <script src="../javascripts/include.js"></script>
+  <style>
+		a:hover{
+			color: #FF00FF;
+		}
+		.html.index .highlight, .html.index .highlight *{
+			color: #FF00FF;
+		}
+		@media print{
+			span.highlight{
+				color: blue;
+			}
+		}
+	</style>
+</head>
+
+<body class="html index">
+
+<!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
+
+  <div w3-include-html="menu.html"></div>
+  <div w3-include-html="menu_html.html"></div>
+	<script>
+	w3.includeHTML();
+	</script>
+
+<!-- ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** -->
+
+<!-- ***** FORM ***** FORM ***** FORM ***** FORM ***** FORM ***** -->
+
+	<form name="planning">
+
+		<fieldset>
+			<legend>This Week's Planning</legend>
+
+			<input type="checkbox" id="cb_website" value="website" />
+			<label for="cb_website">Website</label><br />
+			<input type="checkbox" id="cb_python" value="python" />
+			<label for="cb_python">Python</label><br />
+			<input type="checkbox" id="cb_botting" value="botting" />
+			<label for="cb_botting">Botting</label><br />
+			<input type="checkbox" id="cb_typing" value="typing" />
+			<label for="cb_typing">Typing</label><br />
+			<input type="checkbox" id="cb_read-space" value="read-space" />
+			<label for="cb_read-space">Read Space Book</label><br />
+			<input type="checkbox" id="cb_read-animal" value="read-animal" />
+			<label for="cb_read-animal">Read Animal Adventures</label><br />
+			<input type="checkbox" id="cb_read-info" value="read-info" />
+			<label for="cb_read-info">Read Information Book</label><br />
+			<input type="checkbox" id="cb_maths" value="maths" />
+			<label for="cb_maths">Maths Book</label><br />
+			<input type="checkbox" id="cb_piano" value="piano" />
+			<label for="cb_piano">Piano</label><br />
+			<input type="checkbox" id="cb_journal" value="journal" />
+			<label for="cb_journal">Reading Journal</label><br />
+			<input type="checkbox" id="cb_trace" value="trace" />
+			<label for="cb_trace">Tracing</label><br />
+			<input type="checkbox" id="cb_photo" value="photo" />
+			<label for="cb_photo">Photo Editing</label><br />
+
+		</fieldset>
+	</form>
+
+
+<!-- ***** LIST ***** LIST ***** LIST ***** LIST ***** LIST ***** -->
+
+	<img src="../images/html/printer.png"
+		   id="printer_icon"
+			 alt="print plan"
+			 title="click here to print your plan" />
+
+	<h1 class="print"><script>document.write(new Date().toDateString())</script></h1>
+
+	<ol id="plans">
+	</ol>
+
+<!-- ***** EXTRA JOB ***** EXTRA JOB ***** EXTRA JOB ***** EXTRA JOB ***** -->
+			
+	<div class="downloads">
+		<p><a href="/pages/html/worksheets/forms.pdf" target="_blank">Forms Worksheet</a></p>
+	</div>
+			
+
+<!-- ***** JAVASCRIPT ***** JAVASCRIPT ***** JAVASCRIPT ***** -->
+
+		<script>
+			/****** collect checked tasks and list them in order ******/
+			var form = document.forms.planning;
+			var list = [];
+			var plans = document.getElementById("plans");
+			var printerIcon = document.getElementById("printer_icon");
+			Array.from(form.elements).forEach(function(element){
+				element.onchange = function(){
+					if(element.type=="checkbox"){
+						var text = this.nextElementSibling.innerHTML;
+						if(this.checked){
+							list.push(text);
+						}else{
+							list.splice(list.indexOf(text), 1)
+						}
+						while(plans.firstElementChild){
+							plans.removeChild(plans.firstElementChild);
+						}
+						list.forEach(function(element){
+							var node = document.createElement("li");
+							var textnode = document.createTextNode(element);
+							node.appendChild(textnode);
+							plans.appendChild(node);
+						});
+					}
+					/********************* toggle printer *************************/
+					if(list.length==0){
+						printerIcon.style.visibility = "hidden";
+					}else{
+						printerIcon.style.visibility = "visible";
+					}
+				}
+			});
+			/********************* print ********************************/
+			document.getElementById("printer_icon").addEventListener("click", function(event){
+				event.preventDefault();
+				window.print();
+			});
+		</script>
+		
+
+</body>
+</html>

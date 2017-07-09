@@ -1,0 +1,35 @@
+html, body.about{
+  background-color: #00ff00;
+}
+body.about #menu, body.about #submenu{
+  background-color: deepPink; 
+}
+body.about #menu a, body.about #submenu a{
+  color: aliceBlue; 
+}
+body.about #menu a:hover, body.about #submenu a:hover{
+  color: lawnGreen; 
+}
+body.about div.content{
+	padding: 0 5vw;
+}
+body.about div.content h1{
+	font-size: 500%;
+}
+body.about div.content table{
+	border-collapse: collapse;
+	text-align: left;
+	width:100%;
+	padding:3vw 0;
+}
+body.about div.content table td{
+	border: 0.1vw solid deepPink;
+	padding: 0.5vw;
+}
+body.about div.content table td:first-child{
+	width: 10%;
+	padding: 0;
+}
+body.about div.content table td:first-child img{
+	width: 100%;
+}

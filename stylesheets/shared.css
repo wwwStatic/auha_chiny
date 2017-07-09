@@ -1,0 +1,87 @@
+*{margin:0; border:none; padding:0; font-size: 1.45vw; box-sizing: border-box;}
+ul, ul li{list-style-type: none;}
+hr{margin: 1vw 0; border-bottom: 0.1vw solid black;}
+html{
+  font-family:'Amatic SC', cursive; 
+	background-color: aquamarine;
+}
+body{
+	position: relative;
+	padding-bottom: 5vw;
+}
+.print{
+	display: none;
+}
+.downloads{
+	font-family: "Comic Sans MS", sans-serif;
+	padding: 5.5vw;
+}
+
+/***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU *****/
+
+#menu, #submenu{
+	text-align: center;
+	padding: 1vw 0;
+	background-color: #00ffaa;
+	margin-bottom: 6vw;
+}
+#menu a, #submenu a{
+	font-size: 100%;
+	color: blue;
+	padding: 0.5vw 5vw;
+	text-decoration: none;
+}
+#menu a:hover, #submenu a:hover{
+	color:  #e600e6;
+}
+#menu li, #submenu li{
+	font-size: 120%;
+	display: inline;
+}
+#submenu{
+	text-align: left;
+  margin-top: -5.8vw;
+	padding-left: 1vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	border-top: 0.1vw solid #eeeeee;
+}
+#submenu a{
+	font-size: 90%;
+	padding: 0.5vw 2.5vw;
+}
+
+/***** NANA ***** NANA ***** NANA ***** NANA ***** NANA ***** NANA *****/
+
+.nana, .nana *{
+	font-family: "Comic Sans MS", sans-serif;
+}
+.nana, .nana ol{
+	padding: 0 2vw;
+}
+.nana ol, .nana ol li{
+	list-style-position: outside;
+}
+.nana p, .nana li{
+	padding: 0.5vw 0;
+}
+.nana pre{
+	padding: 2vw;
+	font-family: "Courier", monospace;
+	background-color: #C8E5EC;
+}
+.nana .highlight, .nana .highlight *{
+	color: #ffff99;
+}
+.nana .terminal, .nana .terminal *{
+	color: #77FA50;
+}
+.nana .smaller{
+	font-size: 80%;
+}
+.nana .smaller *{
+	font-size: 100%;
+}
+.nana .code, .nana .code *{
+	font-family: "Courier", monospace;
+}

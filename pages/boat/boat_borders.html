@@ -1,0 +1,306 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+  <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+  <meta name="author" content="wwwebsites" />
+  <meta name="copyright" content="2016, wwwebsites" />
+  <title>Hermione's Boat:Borders</title>
+  <link rel="stylesheet" media="all" href="../../stylesheets/shared.css" />
+  <link rel="stylesheet" media="all" href="../../stylesheets/nana_instruction.css" />
+  <script src="../../javascripts/include.js"></script>
+  <style>
+	  html, body.triangles{
+	  	text-align: center;
+	    background-color: #72bfd1;
+	  }
+	  body.triangles #menu, body.triangles #submenu{
+			background-color: #C8E5EC; /* lighter blue */
+	  }
+		h1{
+			font-size: 350%;
+			text-align: left;
+			padding: 5vw 0 5vw 3vw;
+		}
+	  .boat {
+	    width: 48vw;
+	    margin: 10% auto;
+			display: none;
+	  }
+	  .p-triangle {
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	  }
+	  .p-equilateral {
+	    border-width: 13vw 7.5vw 0 7.5vw;
+	    border-color: #fff transparent transparent transparent;
+	  }
+	  .p-flex {
+	    /*display: -webkit-flex;
+	    display: flex;
+	    -webkit-justify-content: center;
+	    justify-content: center;*/
+	  }
+
+	  .boat__bottom > .p-triangle:nth-child(even) {
+	    /*-moz-transform: rotateX(180deg) translateY(-80.4px);
+	    -ms-transform: rotateX(180deg) translateY(-80.4px);
+	    -webkit-transform: rotateX(180deg) translateY(-80.4px);
+	    transform: rotateX(180deg) translateY(-80.4px);
+	    border-top-color: rgba(255, 255, 255, 0.6);
+	    margin: -81.4px;*/
+	  }
+  }
+
+  </style>
+</head>
+
+<body class="triangles">
+
+<!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
+
+  <div w3-include-html="menu.html"></div>
+  <div w3-include-html="menu_boat.html"></div>
+	<script>
+	w3.includeHTML();
+	</script>
+
+<!-- ***** NANA INSTRUCTION ***** NANA INSTRUCTION ***** -->
+	
+	<div class="nana">
+		<div class="instruction">
+			<p>Dear Hermione, today you learn how to make triangles with css and play around with that. This is again all about borders and the amazing things one can do with borders!</p>
+		</div>
+			
+		<div class="illustration">
+			<div class="one canHover"
+					 onclick="document.querySelector('.two').style.display = 'flex';"
+					 title="Click this square to see the next one!">
+				<p>I am a div<br />width:15vw;<br />height:15vw;</p>
+				<p>Click this square to see the next one!</p>
+			</div>
+			<div class="two canHover"
+					 onclick="document.querySelector('.three').style.display = 'flex';"
+					 title="Click this square to see the next one!">
+				<p>I am also a div, with a fat (2vw) red border!</p>
+			</div>
+			<div class="three canHover"
+					 onclick="document.querySelector('.four').style.display = 'flex';"
+					 title="Click this square to see the next one!">
+				<p>Look at me! What happened?</p>
+			</div>
+			<div class="four canHover"
+					 onclick="document.querySelector('.five').style.display = 'flex';"
+					 title="Click this square to see the next one!">
+			</div>
+			<div class="five canHover"
+					 onclick="document.querySelector('.second').style.display = 'block';"
+					 title="Click this square to see what's next...">
+			</div>
+		</div>
+	
+		<div class="instruction second">
+			<p>Have you heard about a gentleman called Pythagoras? He worked out some amazing math about triangles! <a href="pythagoras.html">Check it out here</a></p>
+			<p class=" canHover"
+				 onclick="document.querySelectorAll('.third').forEach(function(content){ content.style.display = 'block' })"
+				 title="Click here to see the next instruction"
+				 style="cursor:pointer;">Click here to see the next instruction</p>
+		</div><br />
+
+		<div class="instruction third">
+			<p>Below, I made an equilateral triangle for you. 
+				<br />Do you know what that is? It is a triangle with all 3 sides the same length, like the one I made for you.
+				<br />Do you think you can make an equilateral triangle?
+				<br />If you wanted to make one that pointed upwards, how would you do it?</p>
+		</div>
+		<div class="illustration third">
+	    <div></div>
+		</div>
+			
+	</div>
+		
+
+
+<!-- ***** HERMIONE EQUILATERAL TRIANGLE CHALLENGE ***** TRIANGLE CHALLENGE ***** -->
+	
+<style>
+	.hermione-triangle{
+		display: flex;
+		justify-content: center;
+		padding-bottom: 5vw;
+	}
+	.hermione-triangle div{
+		width: 0;
+		height: 0;
+		margin: 2vw;
+		border-style: solid;
+		display: block;
+	}
+	.hermione-triangle .border_triangles{
+		border-color: turquoise deeppink greenyellow royalblue;
+		border-width: 13vw 7.5vw 3.25vw;
+	}
+	.hermione-triangle .pointdown_equilateral{
+		border-color: turquoise transparent transparent;
+		border-width: 13vw 7.5vw 0vw;
+	}
+	.hermione-triangle .pointup_equilateral{
+		border-color: transparent transparent greenyellow ;
+		border-width: 0vw 7.5vw 13vw;
+	}
+	.hermione-triangle .pointright_equilateral{
+		border-color: transparent transparent transparent royalblue ;
+		border-width: 7.5vw 0 7.5vw 13vw;
+	}
+	.hermione-triangle .pointleft_equilateral{
+		border-color: transparent transparent greenyellow ;
+		border-width: 0vw 7.5vw 13vw;
+	}
+</style>
+
+	<h1>HERMIONE'S EQUILATERAL TRIANGLES</h1>
+	<div class="hermione-triangle">
+		
+		<div class="border_triangles">
+		</div>
+
+		<div class="pointdown_equilateral">
+		</div>
+		
+		<div class="pointup_equilateral">
+		</div>
+
+		<div class="pointright_equilateral">
+		</div>
+
+		<div class="pointleft_equilateral">
+		</div>
+		
+	</div>
+	
+
+<!-- ***** HERMIONE ROTATING TRIANGLES CHALLENGE ***** ROTATING TRIANGLES ***** -->
+	
+	<style>
+    /*transform: rotateX(180deg) translateY(-80.4px);
+    border-top-color: rgba(255, 255, 255, 0.6);
+    margin: -81.4px;*/
+		p.leftAlign{
+			text-align: left;
+			padding-left: 3vw;
+		}
+		.hermione-rotating-triangle{
+			display: flex;
+			justify-content: center;
+			padding-bottom: 5vw;
+		}
+		.hermione-rotating-triangle div{
+			width: 0;
+			height: 0;
+			margin: 2vw;
+			border-style: solid;
+			display: block;
+		}
+		.hermione-rotating-triangle .rotating{
+			border-color: white transparent transparent;
+			border-width: 13vw 7.5vw 0vw;
+			cursor: pointer;
+			animation: turn 0.01s ease 0s 200;
+		}
+		@keyframes turn {
+		    0% {transform: rotateZ(0deg);}
+		    100% {transform: rotateZ(360deg);}
+		}
+		.hermione-rotating-triangle .zero{
+			border-color: turquoise transparent transparent;
+			border-width: 13vw 7.5vw 0vw;
+		}
+		.hermione-rotating-triangle .thirty{
+			border-color: turquoise transparent transparent;
+			border-width: 13vw 7.5vw 0vw;
+			transform: rotateZ(30deg);
+		}
+	</style>
+	
+	<h1>HERMIONE'S ROTATING TRIANGLES</h1>
+	<p class="leftAlign">
+		Click the white triangle to make it rotate again!
+	</p>
+	<div class="hermione-rotating-triangle">
+		<div id="rotatingTriangle" class="rotating" title="Click me, and I start rotating again!">
+		</div>
+		<div class="zero">
+		</div>
+		<div class="thirty">
+		</div>
+	</div>
+
+
+	<script>
+		var rotatingTriangle = document.getElementById("rotatingTriangle");
+		rotatingTriangle.addEventListener("click", function(e){
+			e.preventDefault();
+			rotatingTriangle.classList.remove("rotating");
+			void rotatingTriangle.offsetWidth;
+			rotatingTriangle.classList.add("rotating");
+		}, false);
+	</script>
+
+<!-- ***** OVERLAPPING TRIANGLES CHALLENGE ***** OVERLAPPING TRIANGLES ***** -->
+	
+	<style>
+		.hermione-overlapping-triangle{
+			padding-bottom: 5vw;
+		}
+		.hermione-overlapping-triangle div{
+			width: 0;
+			height: 0;
+			margin: 2vw;
+			border-style: solid;
+			display: inline-block;
+		}
+		.hermione-overlapping-triangle .zero{
+			border-color: deeppink transparent transparent;
+			border-width: 13vw 7.5vw 0vw;
+		}
+		.hermione-overlapping-triangle .hundredeighty{
+			border-color: deeppink transparent transparent;
+			border-width: 13vw 7.5vw 0vw;
+			transform: rotateZ(180deg) translateX(19vw) translateY(4vw);
+		}
+	</style>
+	
+	<h1>HERMIONE'S OVERLAPPING TRIANGLES</h1>
+	<div class="hermione-overlapping-triangle">
+		<div class="zero"></div>
+		<div class="hundredeighty"></div>
+	</div>
+	
+
+<!-- ***** BOAT ***** BOAT ***** BOAT ***** BOAT ***** BOAT ***** -->
+	
+	<div class="boat">
+	
+	    <div class="p-triangle p-equilateral"></div>
+	
+	  <!-- <div class="boat__bottom p-flex">
+	    <div class="p-triangle p-equilateral"></div>
+	    <div class="p-triangle p-equilateral"></div>
+	    <div class="p-triangle p-equilateral"></div>
+	    <div class="p-triangle p-equilateral"></div>
+	    <div class="p-triangle p-equilateral"></div>
+	  </div> -->
+	</div>
+
+</body>
+</html>
+
+
+

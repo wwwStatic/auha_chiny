@@ -1,0 +1,6 @@
+html, body.python{
+  background-color: #72bfd1;
+}
+body.python #menu, body.python #submenu{
+  background-color: #C8E5EC; /* lighter blue */
+}

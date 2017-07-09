@@ -1,0 +1,176 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+  <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+  <meta name="author" content="wwwebsites" />
+  <meta name="copyright" content="2016, wwwebsites" />
+  <title>Pythagoras</title>
+  <link rel="stylesheet" media="all" href="../../stylesheets/shared.css" />
+  <link rel="stylesheet" media="all" href="../../stylesheets/nana_instruction.css" />
+  <script src="../../javascripts/include.js"></script>
+  <style>
+	  html, body.pythagoras{
+	  	text-align: center;
+	    background-color: #72bfd1;
+	  }
+	  body.pythagoras #menu, body.pythagoras #submenu{
+			background-color: #C8E5EC; /* lighter blue */
+	  }
+  }
+  </style>
+</head>
+
+<body class="pythagoras">
+
+<!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
+
+  <div w3-include-html="menu.html"></div>
+  <div w3-include-html="menu_boat.html"></div>
+	<script>
+	w3.includeHTML();
+	</script>
+
+<!-- ***** START NANA INSTRUCTION ***** START NANA INSTRUCTION ***** -->
+<!-- ***** NANA INSTRUCTION AREA ***** NANA INSTRUCTION AREA ***** -->
+	
+<div class="nana">
+	
+	<div id="revealAll"
+			 onclick="document.querySelectorAll('.second, .third, .fourth, .sixth').forEach(function(content){content.style.display='block';}); document.querySelectorAll('.fifth').forEach(function(content){content.style.display='flex';}); document.querySelectorAll('.illustration.second img, .illustration.sixth img').forEach(function(content){content.style.display='inline-block'}); document.querySelectorAll('.showNext').forEach(function(content){content.style.display='none'});">I have worked through this: <span>Show all now!</span></div>
+
+	<div class="instruction">
+		<p>Do you remember how to work out the area of a rectangle and a square?</p>
+	</div>
+	
+	<div class="illustration">
+		<img src="../../images/boat/area_rectangle.png" />
+		<img src="../../images/boat/area_square.png" />
+	</div>
+	
+	<p class="showNext"
+		 style="cursor:pointer;"
+	   onclick="this.style.display='none'; document.querySelectorAll('.second').forEach(function(content){content.style.display='block';});">next</p>
+	
+<!-- ***** NANA INSTRUCTION RIGHT ANGLE ***** NANA INSTRUCTION RIGHT ANGLE ***** -->
+
+	<div class="instruction second">
+		<p>Do you remember what a 
+			<span onclick="document.querySelector('.illustration.second img:nth-child(1)').style.display='inline-block'">right angle</span> is? Do you know that a 
+			<span onclick="document.querySelector('.illustration.second img:nth-child(2)').style.display='inline-block'">right angle is 90&deg;</span>? Do you know what a 
+			<span onclick="document.querySelector('.illustration.second img:nth-child(3)').style.display='inline-block'">right-angled triangle</span> is?</p>
+	</div>
+	
+	<div class="illustration second">
+		<img src="../../images/boat/right_angle.png" />
+		<img src="../../images/boat/right_angle_90.png" />
+		<img src="../../images/boat/rightangled_triangle.png" />
+	</div>
+	
+	<p class="second showNext"
+	   style="cursor:pointer;"
+	   onclick="this.style.display='none'; document.querySelectorAll('.third').forEach(function(content){content.style.display='block';});">next</p>
+	
+<!-- ***** NANA INSTRUCTION PYTHAGORAS ***** NANA INSTRUCTION PYTHAGORAS ***** -->
+
+	<div class="instruction third">
+		<p>Good. Because Pythagoras worked out something amazing: Take a rightangled triangle, draw a square over each line. 
+			<br />If you add together the 2 smaller squares, they have the SAME area as the biggest square.</p>
+		<p>In the triangle below, can you work out the area over the shortest side?
+			<br />Can you work out the area over the middlest side?
+			<br />Can you work out the area over the longest side?
+			<br />If you add the 2 smaller squares, what is the result? Is it the same as the area of the square over the longest side?
+	</div>
+	
+	<div class="illustration third">
+		<img src="../../images/boat/areas.png" />
+	</div>
+
+	<p class="third showNext"
+	   style="cursor:pointer;"
+	   onclick="this.style.display='none'; document.querySelectorAll('.fourth').forEach(function(content){content.style.display='block';});">next</p>
+	
+<!-- ***** NANA INSTRUCTION PYTHAGORAS FORMULA ***** PYTHAGORAS FORMULA ***** -->
+
+	<div class="instruction fourth">
+		<p>The mathematical formula for this is 
+			<br /><span style="color:blue; padding-right: 4vw;">blue area = a x a</span>
+					  <span style="color:purple; padding-right: 4vw;">purple area = b x b</span>
+						<span style="color:green;">green area = c x c</span>
+			<br /><span style="color:blue;">blue area</span> + <span style="color:purple;">purple area</span> = <span style="color:green;">green area</span>
+			<br /><span style="color:blue;">a x a</span> + <span style="color:purple;">b x b</span> = <span style="color:green;">c x c</span>
+			<br />or as you will learn in secondary school:
+			<br />a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+	</div>
+
+	<div class="illustration fourth">
+		<img src="../../images/boat/pythagoras_theorem.png" />
+	</div>
+	
+	<p class="fourth showNext"
+	   style="cursor:pointer;"
+	   onclick="this.style.display='none'; document.querySelectorAll('.fifth').forEach(function(content){content.style.display='flex';});">next</p>
+	
+<!-- ***** NANA INSTRUCTION EQUILATERAL WHY ***** EQUILATERAL WHY ***** -->
+
+	<div class="instruction fifth">
+		<p>Are you wondering how this matters for the equilateral triangle you are trying to make? 
+			<br />The reason is, that we need to work out how thick the borders need to be, so we end up with a triangle that has 3 sides that are EXACTLY the same length...
+			<br />The top border (the red one) needs to be as thick as the vertical black arrow, doesn't it? That's also called the height of a triangle...
+		</p>
+	</div>
+
+	<div class="illustration fifth">
+		<div>
+		</div>
+		<img src="../../images/boat/equilateral_triangle_height.png" />
+	</div>
+	
+	<p class="fifth showNext"
+	   style="cursor:pointer;"
+	   onclick="this.style.display='none'; document.querySelectorAll('.sixth').forEach(function(content){content.style.display='block';});">next</p>
+
+<!-- ***** NANA INSTRUCTION EQUILATERAL FORMULA ***** EQUILATERAL FORMULA ***** -->
+
+	<div class="instruction sixth">
+			<p>That's why we need Mr. Pythagoras!
+			<br />If you 
+			<span onclick="document.querySelector('.illustration.sixth img:nth-child(1)').style.display='inline-block'">cut the equilateral triangle in half</span>, you get 2 rightangled triangle. They are exactly the same, mirroring each other.
+			<br />In each of the rightangled triangles, the 
+			<span onclick="document.querySelector('.illustration.sixth img:nth-child(2)').style.display='inline-block'">shortest side</span> is exactly half of the whole side. (You cut it in half, remember?)
+			<br />This means, we know the long side, we know the short side and thanks to Pythagoras, we can now 
+			<span onclick="document.querySelector('.illustration.sixth img:nth-child(3)').style.display='inline-block'">work out the middlest side.</span> Which is the thickness of the border, or the height of the black arrow.
+			<br />
+			<br /><span style="color:blue;">Shortest side square</span> + <span style="color:purple;">middlest side square</span> = <span style="color:green;">longest side square</span>
+			<br />OR: <span style="color:green;">Longest side square</span> - <span style="color:blue;">shortest side square</span> = <span style="color:purple;">middlest side square</span>
+			<br /><span style="color:green;">15 x 15 = 225</span>
+			<br /><span style="color:blue;">7.5 x 7.5 = 56</span>
+			<br /><span style="color:green;">225</span> - <span style="color:blue;">56</span> = <span style="color:purple;">169</span>
+			<br /><span style="color:purple;">Middlest square area = 169</span>
+			<br /><span style="color:purple;">Middlest side = 13</span>
+			<br />To be honest, I have been cheating a tiny bit, the real answer would be a tiny little bit less than 13, but you haven't learned to work with decimal points yet, and it is very close to 13!
+		</p>
+	</div>
+
+	<div class="illustration sixth">
+		<img src="../../images/boat/equilateral_triangle.png" />
+		<img src="../../images/boat/equilateral_triangle_y.png" />
+		<img src="../../images/boat/pythagoras_theorem_b.png" />
+	</div>
+	
+	
+</div>
+<!-- ***** END NANA INSTRUCTION ***** END NANA INSTRUCTION ***** -->
+		
+
+</body>
+</html>
+
+
+

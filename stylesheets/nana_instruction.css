@@ -1,0 +1,152 @@
+.nana{
+	margin: -3vw 3vw 2vw;
+}
+.nana *{
+	font-family: Chalkboard, sans-serif;
+}
+.nana p{
+	padding: 1vw; 
+}
+.nana sup{
+	font-size: 60%; 
+}
+.nana .canHover:hover{
+	opacity: 0.5;
+}
+.nana #revealAll{
+	position: relative;
+	left: -2vw;
+	top: -3vw;
+	text-align: left;
+	color: #666666;
+	padding: 0.5vw 0 0;
+}
+.nana #revealAll span{
+	color: #d8d8d8;
+	cursor: pointer;
+}
+.nana #revealAll span:hover{
+	color: white;
+}
+
+/*******************************/
+/***** TRIANGLES & BORDERS *****/
+/*******************************/
+
+.triangles .nana a{
+	font-family: Chalkboard, sans-serif;
+	color: blue; 
+	text-decoration: none; 
+}
+.triangles .nana a:hover{
+	color: #e600e6; 
+}
+.triangles .nana .instruction{
+	text-align: left;
+	margin: 5vw 0;
+	background-color: #C8E5EC;
+}
+.triangles .nana .instruction.second, .triangles .nana .instruction.third, .triangles .nana .illustration.third{
+	display: none; 
+}
+.triangles .nana .illustration{
+	margin: 2vw 0;
+	display: flex;
+	justify-content: center;
+}
+.triangles .nana .illustration div{
+	width: 15vw; 
+	height: 15vw;
+	margin: 0 1vw;
+	background-color: white;
+	cursor: pointer;
+}
+.triangles .nana .illustration .two{
+	border-style: solid; 
+	border-width: 2.5vw; 
+	border-color: red; 
+	display: none; 
+}
+.triangles .nana .illustration .three{
+	border-style: solid; 
+	border-width: 3vw; 
+	border-color: red green; 
+	display: none; 
+}
+.triangles .nana .illustration .four{
+	width: 0; 
+	height: 0;
+	border-style: solid; 
+	border-width: 7.5vw; 
+	border-color: red green; 
+	display: none; 
+}
+.triangles .nana .illustration .five{
+	width: 0; 
+	height: 0;
+	border-style: solid; 
+	border-width: 13vw 7.5vw 7.5vw; 
+	border-color: red blue green yellow; 
+	background-color: transparent;
+	display: none; 
+}
+.triangles .nana .illustration.third{
+	text-align: center;
+	padding-bottom: 5vw;
+}
+.triangles .nana .illustration.third div{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 13vw 7.5vw 0 7.5vw;
+  border-color: #fff transparent transparent transparent;
+	background-color: transparent;
+}
+
+/**********************/
+/***** PYTHAGORAS *****/
+/**********************/
+
+.pythagoras .nana .instruction{
+	text-align: left;
+	background-color: #C8E5EC;
+}
+.pythagoras .nana .illustration{
+	margin: 2vw 0;
+	display: flex;
+	justify-content: center;
+}
+.pythagoras .nana .illustration div{
+	/*width: 15vw;
+	height: 15vw;
+	margin: 0 1vw;
+	background-color: white;*/
+}
+.pythagoras .nana .illustration img{
+	margin: 0 1vw;
+}
+.pythagoras .nana .illustration.second img, .pythagoras .nana .illustration.sixth img{
+	display: none;
+}
+.pythagoras .nana .instruction.second p span, .pythagoras .nana .instruction.sixth p span{
+	color: #cc0066;
+	cursor: pointer;
+}
+.pythagoras .nana .instruction.second p span:hover, .pythagoras .nana .instruction.sixth p span:hover{
+	color: #e600e6;
+}
+.pythagoras .nana .illustration.fifth div{
+	width: 0; 
+	height: 0;
+	border-style: solid; 
+	border-width: 13vw 7.5vw 7.5vw; 
+	border-color: red blue green yellow; 
+	background-color: transparent;
+}
+.pythagoras .nana .illustration.fifth img{
+	width: 15vw;
+	height: 20.3vw;
+}
+.pythagoras .nana .second, .pythagoras .nana .third, .pythagoras .nana .fourth, .pythagoras .nana .fifth, .pythagoras .nana .sixth{
+	display: none;
+}

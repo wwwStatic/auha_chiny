@@ -1,0 +1,144 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+  <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+  <meta name="author" content="wwwebsites" />
+  <meta name="copyright" content="2016, wwwebsites" />
+  <title>Hermione's Boat Page</title>
+  <link rel="stylesheet" media="all" href="../stylesheets/shared.css" />
+  <script src="../javascripts/include.js"></script>
+  <style>
+	  html, body.cssBoat{
+	  	text-align: center;
+	    background-color: #72bfd1;
+	  }
+	  body.cssBoat #menu, body.cssBoat #submenu{
+		  background-color: #C8E5EC; /* lighter blue */
+	  }
+	  .p-triangle {
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	  }
+	  .p-scalane {
+	    border-width: 0 80.4px 240px 80.4px;
+	    border-color: transparent transparent rgba(255, 255, 255, 0.6) transparent;
+	  }
+	  .p-scalane--sm {
+	    backface-visibility: hidden;
+	    border-width: 0 20.1px 60px 20.1px;
+	    border-color: transparent transparent #fff transparent;
+	  }
+	  .p-equilateral {
+	    border-width: 139.2px 80.4px 0 80.4px;
+	    border-color: #fff transparent transparent transparent;
+	  }
+	  .p-flex {
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-justify-content: center;
+	    justify-content: center;
+	  }
+
+	  .boat {
+	    animation: sail_away 2s 2s ease-in-out alternate 40;
+	    width: 480px;
+	    margin: 10% auto;
+	  }
+	  .boat__top {
+	    position: relative;
+	  }
+	  .boat__top-flagpole {
+	    width: 160.8px;
+	    height: 240px;
+	    border-left: 2.4px solid #fff;
+	    margin-left: -1.2px;
+	    position: absolute;
+	    top: 1.2px;
+	    left: 50%;
+	  }
+	  .boat__top-flagpole > .p-scalane--sm {
+	    -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    -webkit-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	    animation: flag 2s ease-in forwards;
+	    position: absolute;
+	    top: -12px;
+	    left: 7.2px;
+	  }
+	  .boat__bottom > .p-triangle:nth-child(even) {
+	    -moz-transform: rotateX(180deg) translateY(-80.4px);
+	    -ms-transform: rotateX(180deg) translateY(-80.4px);
+	    -webkit-transform: rotateX(180deg) translateY(-80.4px);
+	    transform: rotateX(180deg) translateY(-80.4px);
+	    border-top-color: rgba(255, 255, 255, 0.6);
+	    margin: -81.4px;
+	  }
+
+	  @keyframes flag {
+	    from {
+	      top: 100%;
+	    }
+	    to {
+	      top: -12px;
+	    }
+	  }
+	  @keyframes sail_away {
+	    50% {
+	      -moz-transform: rotate(2deg) translate(20px);
+	      -ms-transform: rotate(2deg) translate(20px);
+	      -webkit-transform: rotate(2deg) translate(20px);
+	      transform: rotate(2deg) translate(20px);
+	    }
+	    100% {
+	      -moz-transform: rotate(-3deg) translate(-10px);
+	      -ms-transform: rotate(-3deg) translate(-10px);
+	      -webkit-transform: rotate(-3deg) translate(-10px);
+	      transform: rotate(-3deg) translate(-10px);
+	    }
+	  }
+
+  </style>
+</head>
+
+<body class="cssBoat">
+
+<!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
+
+  <div w3-include-html="menu.html"></div>
+  <div w3-include-html="menu_boat.html"></div>
+	<script>
+	w3.includeHTML();
+	</script>
+
+<!-- ***** BOAT ***** BOAT ***** BOAT ***** BOAT ***** BOAT ***** -->
+
+<div class="boat">
+  <div class="boat__top p-flex">
+    <div class="boat__top-flagpole">
+      <div class="p-triangle p-scalane--sm"></div>
+    </div>
+    <div class="p-triangle p-scalane"></div>
+  </div>
+  <div class="boat__bottom p-flex">
+    <div class="p-triangle p-equilateral"></div>
+    <div class="p-triangle p-equilateral"></div>
+    <div class="p-triangle p-equilateral"></div>
+    <div class="p-triangle p-equilateral"></div>
+    <div class="p-triangle p-equilateral"></div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
