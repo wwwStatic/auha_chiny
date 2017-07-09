@@ -1,0 +1,252 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+  <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+  <meta name="author" content="wwwebsites" />
+  <meta name="copyright" content="2016, wwwebsites" />
+  <title>Basic HTML Page</title>
+  <link rel="stylesheet" media="all" href="../../stylesheets/shared.css" />
+  <link rel="stylesheet" media="all" href="../../stylesheets/html.css" />
+  <script src="../../javascripts/include.js"></script>
+	<style>
+		body{
+		}
+		.nana h2{
+			clear: both;
+			margin: 3vw 0 2vw;
+		}
+		.nana h3{
+			margin-top: 3vw;
+		}
+		.nana .codePlus{
+			border-collapse: collapse;
+		}
+		.nana .codePlus td{
+			font-size: 75%;
+			color: blue;
+			padding-left: 0.5vw;
+		}
+		.nana .codePlus td:first-child{
+			font-size: 100%;
+			color: #990000;
+			width: 15vw;
+			background-color: #dddddd;
+		}
+		ol li{
+			font-size: 85%;
+		}
+		.nana pre, .nana code{
+			font-size: 100%;
+			color: #990000;
+			background-color: #dddddd;
+		}
+	</style>
+</head>
+
+<body class="html basic">
+
+<!-- ************************************************************ -->
+<!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
+<!-- ************************************************************ -->
+
+  <div w3-include-html="menu.html"></div>
+  <div w3-include-html="menu_html.html"></div>
+	<script>
+	w3.includeHTML();
+	</script>
+
+<!-- *************************************************************************** -->
+<!-- ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** -->
+<!-- *************************************************************************** -->
+	
+	<div class="nana">
+		
+		<h1>Basic Setup of an HTML Page:</h1>
+		
+<!-- *********************************************************************** -->
+<!-- ***** MINI ***** MINI ***** MINI ***** MINI ***** MINI ***** MINI ***** -->
+<!-- *********************************************************************** -->
+
+		<h2>1. The absolute minimum:</h2>
+		
+			<table class="codePlus">
+				
+				<tr>
+					<td><code>&lt;html></code>
+					</td>
+					<td>Telling the browser: "Here comes an HTML document!"
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head></code>
+					</td>
+					<td>The "head" is for content that won't be seen. Here you can add information about your document.
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head></code>
+					</td>
+					<td>Closing tag: End of HEAD.
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body></code>
+					</td>
+					<td>The "body" is for the content you want to show to your visitors. This could be text, images, sound, films, links etc.
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body></code>
+					</td>
+					<td>Closing tag: End of BODY.
+					</td>
+				</tr>
+				<tr>
+					<td><code>&lt;/html></code>
+					</td>
+					<td>Closing tag: End of HTML document.
+					</td>
+				</tr>
+
+			</table>
+			
+			<h3>Task 1:</h3>
+			<ol type="a">
+				<li>In your Sites folder, make a new folder called "basic".</li>
+				<li>Open the folder in TextMate.</li>
+				<li>Make a file called "index.html".</li>
+				<li>Type the basic structure of an html page into your file, without looking at this page here.</li>
+				<li>Did you get it right?</li>
+				<li>Open the page in your browser (safari or chrome). The address is "localhost/~YOURNAME/basic/index.html". What do you see?</li>
+			</ol>
+		
+<!-- *********************************************************************** -->
+<!-- ***** BODY ***** BODY ***** BODY ***** BODY ***** BODY ***** BODY ***** -->
+<!-- *********************************************************************** -->
+
+		<h2>2. Let's add something to the body!</h2>
+		
+		<p>Each tag tells the browser what is coming next. The closing tag tells the browser: Message over.</p><br />
+		
+			<table class="codePlus">
+				
+				<tr>
+					<td><code>&lt;body></code>
+					</td>
+					<td>Make sure you nest your tags, so you easily see what is inside what (4 spaces or 1 tab).
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Welcome!</code>
+					</td>
+					<td>"H1" or "h1" is a title tag (header). There are 6 of them: h1-h6. H1 is the most important header in your document.
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1></code>
+					</td>
+					<td>H1 closing tag: End of H1. The browser now knows that "Welcome!" is meant to be shown as a title.
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div></code>
+					</td>
+					<td>This is a "DIV" or "div" tag. There is nothing in it at the moment.
+					</td>
+				</tr>
+				<tr>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></code>
+					</td>
+					<td>DIV closing tag: End of DIV.
+					</td>
+				</tr>
+				<tr>
+					<td><code>&lt;/body></code>
+					</td>
+					<td>BODY closing tag: End of body.
+					</td>
+				</tr>
+
+			</table>
+			
+			<h3>Task 2:</h3>
+			<ol type="a">
+				<li>In your index.html file, add an "H1" and a "DIV" tag. Don't peak!</li>
+				<li>Please write a short welcome message in your "div" tag.</li>
+				<li>After you had a look at the result of your work, delete the "H1" closing tag (&lt;/h1>). Check what happens in the browser.</li>
+				<li>Do you understand why the closing tags are as important as the opening tags?</li>
+			</ol>
+		
+<!-- *********************************************************************** -->
+<!-- ***** HEAD ***** HEAD ***** HEAD ***** HEAD ***** HEAD ***** HEAD ***** -->
+<!-- *********************************************************************** -->
+
+		<h2>3. Some things to put in the head:</h2>
+
+		<p>In the head you can put information about your document (meta tags), you can add a title tag, and you can tell the browser where to find other files that are needed for your page, like stylesheets and scripts.</p><br />
+
+<pre><code>&lt;head>
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    &lt;meta http-equiv="content-language" content="en" />
+    &lt;meta name="description" content="Hermione Lovelace's backstage tour of the web" />
+    &lt;meta name= "keywords" content="HTML, CSS, Python, Javascript" />
+    &lt;meta name="author" content="Hermione Lovelace" />
+    &lt;meta name="copyright" content="2017, Hermione Lovelace" />
+    
+    &lt;title>Welcome!&lt;/title>
+    
+    &lt;link rel="stylesheet" media="all" href="basic.css" />
+&lt;/head>
+</code></pre>
+
+		<br /><p>In the head above we have 6 meta tags giving information about your document, 1 title tag with "Welcome!" as its content, and 1 link to a stylesheet.
+		<br /><br />
+		Tags that NEVER have a content (like "LINK" or "META" or "IMG") don't need an opening AND a closing tag - though of course it is fine to do that. You can do a "shorthand" version: Instead of writing <code>&lt;img>&lt;/img></code>, you can just write <code>&lt;img /></code>.
+		<br /><br />
+		Information that is given INSIDE the opening tags is called ATTRIBUTES of the tags. For example your "link" tag to your stylesheet has 3 attributes: "rel", "media" and "href". We will talk about tag attributes very soon.</p><br />
+
+			<h3>Task 3:</h3>
+			<ol type="a">
+				<li>Have you read the "head" code above carefully? Do you sort of get what it is about? Copy and paste it into the head of your index.html page.</li>
+				<li>Go ahead and make a new file called "basic.css", since you wrote in the head that the browser should link it to your "index.html" page.</li>
+				<li>Copy and paste the code below into your "basic.css" file.<br /><br />
+<pre>h1{
+  font-color: red;
+}
+div{
+  width: 50vw;
+  height: 20vw;
+  color: blue;
+  background-color: pink;
+}</pre></li>
+				<li>Reload your page and try out some stuff!</li>
+				<li>Add padding, margin, borders to your title (h1) and to the div.</li>
+				<li>Please add a paragraph to your "index.html" file (<code>&lt;p>Text here&lt;/p></code>), add some content (text) and then "style" that text in your "basic.css" file! You could try colour, background-colour, font-size, font-family, padding, margin, borders.</li>
+			</ol>
+
+
+	</div>
+</body>
+</html>
+
+
+

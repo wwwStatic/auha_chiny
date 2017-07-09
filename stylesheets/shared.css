@@ -65,9 +65,11 @@ body{
 .nana p, .nana li{
 	padding: 0.5vw 0;
 }
+.nana pre, .nana code{
+	font-family: "Courier", monospace;
+}
 .nana pre{
 	padding: 2vw;
-	font-family: "Courier", monospace;
 	background-color: #C8E5EC;
 }
 .nana .highlight, .nana .highlight *{
