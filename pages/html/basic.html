@@ -47,6 +47,12 @@
 			color: #990000;
 			background-color: #dddddd;
 		}
+		.blue{
+			color: blue;
+		}
+		.red{
+			color: #990000;
+		}
 	</style>
 </head>
 
@@ -139,14 +145,14 @@
 
 		<h2>2. Let's add something to the body!</h2>
 		
-		<p>Each tag tells the browser what is coming next. The closing tag tells the browser: Message over.</p><br />
+		<p>Each opening tag tells the browser what is coming next. The closing tag tells the browser: Message over. The opening tag plus the content plus the closing tag is called a <span class="red">HTML element</span>. The example below has 3 HTML elements: the BODY element, which has 2 elements nested inside: a H1 element and a DIV element</p><br />
 		
 			<table class="codePlus">
 				
 				<tr>
 					<td><code>&lt;body></code>
 					</td>
-					<td>Make sure you nest your tags, so you easily see what is inside what (4 spaces or 1 tab).
+					<td>Make sure you indent your nested elements, so you easily see what is inside what (indent = 4 spaces or 1 tab).
 					</td>
 				</tr>
 				<tr>
@@ -190,10 +196,10 @@
 			
 			<h3>Task 2:</h3>
 			<ol type="a">
-				<li>In your index.html file, add an "H1" and a "DIV" tag. Don't peak!</li>
-				<li>Please write a short welcome message in your "div" tag.</li>
+				<li>In your index.html file, add an "H1" and a "DIV" element. Don't peek!</li>
+				<li>Please write a short welcome message in your "div" element.</li>
 				<li>After you had a look at the result of your work, delete the "H1" closing tag (&lt;/h1>). Check what happens in the browser.</li>
-				<li>Do you understand why the closing tags are as important as the opening tags?</li>
+				<li>Do you now understand why closing tags are important?</li>
 			</ol>
 		
 <!-- *********************************************************************** -->
@@ -202,7 +208,7 @@
 
 		<h2>3. Some things to put in the head:</h2>
 
-		<p>In the head you can put information about your document (meta tags), you can add a title tag, and you can tell the browser where to find other files that are needed for your page, like stylesheets and scripts.</p><br />
+		<p>In the head you can put information about your document (meta tags), you can add a title element, and you can tell the browser where to find other files that are needed for your page, like stylesheets and scripts.</p><br />
 
 <pre><code>&lt;head>
     &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -218,11 +224,11 @@
 &lt;/head>
 </code></pre>
 
-		<br /><p>In the head above we have 6 meta tags giving information about your document, 1 title tag with "Welcome!" as its content, and 1 link to a stylesheet.
+		<br /><p>In the head above we have 6 meta tags giving information about your document, 1 title element with "Welcome!" as its content, and 1 link to a stylesheet.
 		<br /><br />
-		Tags that NEVER have a content (like "LINK" or "META" or "IMG") don't need an opening AND a closing tag - though of course it is perfectly ok to write them. You can use a "shorthand" version: Instead of writing <code>&lt;img>&lt;/img></code>, you can just write <code>&lt;img /></code>.
+		Elements that NEVER have a content (like "LINK" or "META" or "IMG") don't need an opening AND a closing tag - though of course it is perfectly ok to write them. You can use a "shorthand" version: Instead of writing <code>&lt;img>&lt;/img></code>, you can just write <code>&lt;img /></code>.
 		<br /><br />
-		Information that is given INSIDE the opening tags is called ATTRIBUTES of the tags. For example your "link" tag above to your stylesheet has 3 attributes: "rel", "media" and "href". We will talk about tag attributes very soon.</p><br />
+		Information that is given INSIDE the opening tags is called ATTRIBUTES of the element. For example your "link" tag above to your stylesheet has 3 attributes: "rel", "media" and "href". We will talk about element attributes very soon.</p>
 
 			<h3>Task 3:</h3>
 			<ol type="a">
@@ -233,14 +239,89 @@
   color: red;
 }
 div{
-  width: 50vw;
+  width: 20vw;
   height: 20vw;
-  color: blue;
-  background-color: pink;
+  color: white;
+  background-color: black;
 }</pre></li>
 				<li>Reload your page and try out some stuff!</li>
 				<li>Add padding, margin, borders to your title (h1) and to the div.</li>
 				<li>Add a paragraph to your "index.html" file (<code>&lt;p>Text here&lt;/p></code>), add some content (text) and then "style" that text in your "basic.css" file! You could try colour, background-colour, font-size, font-family, padding, margin, borders.</li>
+			</ol>
+
+		
+<!-- ************************************************************************* -->
+<!-- ***** ATTRIBUTES ***** ATTRIBUTES ***** ATTRIBUTES ***** ATTRIBUTES ***** -->
+<!-- ************************************************************************* -->
+
+		<h2>4. HTML element attributes:</h2>
+
+		<p>Every HTML element can have many attributes. Some attributes are global (all elements have them), like 'id' or 'class', others are specific to certain elements, like 'href' for links or 'src' for images.</p><br />
+
+<code>&lt;div <span class="blue">id="firstDiv"</span>>content&lt;/div></code>
+
+		<br /><br /><p>Attributes always have a name and a value. In the div above 'id' is the name, "firstDiv" is the value. The pattern is always: name="value". If there is more than one attribute, you can just line them up: name1="value1" name2="value2" etc.</p><br />
+		
+<code>&lt;div <span class="blue">id="firstDiv" class="bigDiv"</span>>content&lt;/div></code>
+
+		<br /><br /><p>If there are a lot of attributes, lining them up can make it quite hard to read them. It is also allowed to put the attributes underneath each other, like so:</p><br />
+
+<pre><code>&lt;div <span class="blue">id="firstDiv"
+     class="bigDiv"
+     title="myLovelyDiv"
+     alt="This is the first div, it is big and I like it a lot. It is in German."
+     tabindex="3"
+     lang="de"
+     onclick="alert('Hoi Du alte Chueche!')"</span>>Inhalt
+&lt;/div></code></pre>
+
+
+<br /><p>Watch out that you do not forget the <span class='red'>&gt;</span> after the attributes. It is part of the tag, but it can get lost if there are very many attributes... 
+<br />Here is a link to a list of all the possible attributes: <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">w3 schools HTML attributes</a></p><br />
+
+<p>One last thing for now: A HTML element can only have <span class="red">ONE id attribute value</span>, and it has to be <span class="red">unique</span>. No other element in a document is allowed to have the same id. That is the whole point of the id attribute: It makes sure that you can grab exactly the HTML element you are looking for: There is only ONE Hermione Lovelace!
+<br />On the other hand, a HTML element can have <span class="red">many values for the class attribute, and classes can be shared by many HTML elements</span>: There are many Lovelaces. Some are male and some are female....
+</p><br />
+
+<pre><code>&lt;div <span class="blue">id="firstDiv"
+     class="bigDiv roundDiv redDiv amazingDiv"</span>>Toll
+&lt;/div>
+
+&lt;div <span class="blue">id="secondDiv"
+     class="bigDiv roundDiv blueDiv boringDiv"</span>>Langweilig
+&lt;/div></code></pre>
+
+
+			<h3>Task 4:</h3>
+			<ol type="a">
+				<li>In your "index.html" file, add a total of 9 DIV elements. Give them each an id attribute, from "one" to "nine".</li>
+				<li>Add the following classes to your DIV elements:</li>
+				<li>one, two, three: class="red"</li>
+				<li>four, five, six: class="green"</li>
+				<li>seven, eight, nine: class="blue"</li>
+				<li>Add more classes:</li>
+				<li>one, four, seven: add class "fatBorder"</li>
+				<li>two, five, eight: add class "mediumBorder"</li>
+				<li>three, six, nine: add class "thinBorder"</li>
+				<li>When you have done that, read the code below and try to add it to your basic.css file without peeking if you can.<br /><br />
+<pre>div.red{
+  background-color: red;
+}
+div.blue{
+  background-color: blue;
+}
+div.green{
+  background-color: green;
+}
+div.fatBorder{
+  border: 1vw solid white;
+}
+div.mediumBorder{
+  border: 0.5vw solid white;
+}
+div.thinBorder{
+  border: 0.1vw solid white;
+}</pre></li>
 			</ol>
 
 
