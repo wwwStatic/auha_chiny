@@ -44,6 +44,10 @@
 	  body.shapes #menu, body.shapes #submenu, footer{
 			background-color: #C8E5EC; /* lighter blue */
 	  }
+		h1{
+			font-size: 125%;
+			margin: -3vw 0 3vw;
+		}
 		body.shapes .steps, body.shapes #result{
 			height:50vh;
 			height:520px;
@@ -243,52 +247,52 @@
 			margin-top:150px;
 			margin-left:44px;
 		}
-		.tree#one {
+		.t_one {
 			margin-top:150px;
 			margin-left:44px;
 			transform:scale(.6);
 		}
-		.tree#two {
+		.t_two {
 			margin-top:170px;
 			margin-left:350px;
 			transform:scale(.6);
 		}
-		.tree#three {
+		.t_three {
 			margin-top:170px;
 			margin-left:77px;
 			transform:scale(.6);
 		}
-		.tree#four {
+		.t_four {
 			margin-top:145px;
 			margin-left:300px;
 			transform:scale(.6);
 		}
-		.tree#five {
+		.t_five {
 			margin-top:240px;
 			margin-left:130px;
 			transform:scale(.8);
 		}
-		.tree#six {
+		.t_six {
 			margin-top:220px;
 			margin-left:40px;
 			transform:scale(.7);
 		}
-		.tree#seven {
+		.t_seven {
 			margin-top:210px;
 			margin-left:330px;
 			transform:scale(.7);
 		}
-		.tree#eight {
+		.t_eight {
 			margin-top:240px;
 			margin-left:257px;
 			transform:scale(.8);
 		}
-		.tree#nine {
+		.t_nine {
 			margin-top:315px;
 			margin-left:85px;
 			transform:scale(.9);
 		}
-		.tree#ten {
+		.t_ten {
 			margin-top:315px;
 			margin-left:300px;
 			transform:scale(.9);
@@ -297,7 +301,7 @@
 </head>
 
 <body class="shapes">
-
+	
 <!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
 
   <div w3-include-html="menu.html"></div>
@@ -308,6 +312,8 @@
 
 <!-- ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** -->
 	
+	<h1>Beautiful work by Nicolas Raube, great for understanding<br />flexbox, borders and ::before and ::after pseudoelements</h1>
+
 <!-- ******************************* CONTAINER ******************************** -->
 	<div class="steps">
 		<div class="left">
@@ -715,12 +721,12 @@ html: (3 leaves nested)
 	<div class="steps">
 		<div class="left">
 			<code>
-<pre>.tree#one {
+<pre>.t_one {
   margin-top:150px;
   margin-left:44px;
   transform:scale(.6);
 }
-.tree#two {
+.t_two {
   margin-top:170px;
   margin-left:350px;
   transform:scale(.6);
@@ -729,12 +735,12 @@ etc
 
 html: 10 trees
 
-&lt;div class="tree" id="one">
+&lt;div class="tree t_one">
   &lt;div class="leaf">&lt;/div>
   &lt;div class="leaf">&lt;/div>
   &lt;div class="leaf">&lt;/div>
 &lt;/div>
-&lt;div class="tree" id="two">
+&lt;div class="tree t_two">
   &lt;div class="leaf">&lt;/div>
   &lt;div class="leaf">&lt;/div>
   &lt;div class="leaf">&lt;/div>
@@ -744,52 +750,52 @@ etc
 			</code>
 		</div>
 		<div class="container">
-			<div class="tree" id="one">
+			<div class="tree t_one">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="two">
+			<div class="tree t_two">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="three">
+			<div class="tree t_three">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="four">
+			<div class="tree t_four">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="five">
+			<div class="tree t_five">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="six">
+			<div class="tree t_six">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="seven">
+			<div class="tree t_seven">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="eight">
+			<div class="tree t_eight">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="nine">
+			<div class="tree t_nine">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="ten">
+			<div class="tree t_ten">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
@@ -818,52 +824,52 @@ etc
 				<div class="door"></div>
 			</div>
 		
-			<div class="tree" id="one">
+			<div class="tree t_one">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="two">
+			<div class="tree t_two">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="three">
+			<div class="tree t_three">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="four">
+			<div class="tree t_four">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="five">
+			<div class="tree t_five">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="six">
+			<div class="tree t_six">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="seven">
+			<div class="tree t_seven">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="eight">
+			<div class="tree t_eight">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="nine">
+			<div class="tree t_nine">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
-			<div class="tree" id="ten">
+			<div class="tree t_ten">
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 				<div class="leaf"></div>
