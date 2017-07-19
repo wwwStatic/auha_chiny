@@ -25,13 +25,16 @@ body{
 	background-color: #00ffaa;
 	margin-bottom: 6vw;
 }
-#menu a, #submenu a{
+#menu a, #submenu a, footer a{
 	font-size: 100%;
 	color: blue;
 	padding: 0.5vw 5vw;
 	text-decoration: none;
 }
-#menu a:hover, #submenu a:hover{
+footer a{
+	padding: 0;
+}
+#menu a:hover, #submenu a:hover, footer a:hover{
 	color:  #e600e6;
 }
 #menu li, #submenu li{
@@ -86,4 +89,16 @@ body{
 }
 .nana .code, .nana .code *{
 	font-family: "Courier", monospace;
+}
+
+/***** FOOTER ***** FOOTER ***** FOOTER ***** FOOTER ***** FOOTER *****/
+
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	text-align: center;
+	padding: 1vw 0;
+	background-color: #d8d8d8;
+	margin-bottom: 0;
 }

@@ -15,9 +15,288 @@
   <link rel="stylesheet" media="all" href="../../stylesheets/boat.css" />
   <script src="../../javascripts/index.js"></script>
   <script src="../../javascripts/include.js"></script>
+  <style>
+		:root{
+			--bg-color:#FFF9C4;
+			--container-color:#4CAF50;
+			--sun-color:#FFEB3B;
+			--sun-light-color:#FDD835;
+			--mountain-left-color:#BDBDBD;
+			--mountain-right-color:#9E9E9E;
+			--path-color:#66BB6A;
+			--house-color:#FFEE58;
+			--house-bottom-color:#5D4037;
+			--house-window-color:lightblue;
+			--house-window-border-color:#9E9E9E;
+			--house-door-color:#4E342E;
+			--house-door-knob-color:white;
+			--house-chimney-color:#3E2723;
+			--house-roof-border-color:#3E2723;
+			--house-roof-color:#5D4037;
+		  --tree-stem-color:#795548;
+		  --tree-left-color:#388E3C;
+		  --tree-right-color:#1B5E20;
+		}
+	  html, body.shapes{
+	  	text-align: center;
+	    background-color: #72bfd1;
+	  }
+	  body.shapes #menu, body.shapes #submenu, footer{
+			background-color: #C8E5EC; /* lighter blue */
+	  }
+		body.shapes .steps, body.shapes #result{
+			height:50vh;
+			height:520px;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			margin:0;
+			font-size:0;
+			background:var(--bg-color);
+		}
+		body.shapes .steps{
+			height: auto;
+			margin-bottom: 1vw;
+		}
+		body.shapes div.left, body.shapes div.right{
+			text-align: left;
+			width:400px;
+			height:400px;
+		}
+		pre{
+			font-size: 70%;
+			padding-left: 1vw;
+		}
+		body.shapes .container{
+			background:var(--container-color);
+			width:400px;
+			height:400px;
+			border-radius:100%;
+			margin-top:120px;
+		}
+		.sun {
+			position:absolute;
+			width:150px;
+			height:150px;
+			background:var(--sun-color);
+			border-radius:100%;
+			margin-top:-100px;
+			margin-left:90px;
+			box-shadow:0 0 50px 20px var(--sun-light-color);
+		}
+		.mountain {
+			position:absolute;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 0 200px 100px;
+			border-color:transparent transparent var(--mountain-left-color) transparent;
+		}
+		.mountain::after {
+			content:'';
+			position:absolute;
+			display:block;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 100px 200px 0;
+			border-color:transparent transparent var(--mountain-right-color) transparent;
+		}
+		.m_one {
+			margin-top:-100px;
+			margin-left:70px;
+			transform:scale(1.1);
+		}
+		.m_two {
+			margin-top:-40px;
+			margin-left:-1px;
+			transform:scale(.8);
+		}
+		.m_three {
+			margin-top:-50px;
+			margin-left:194px;
+		}
+		.m_four {
+			margin-top:-80px;
+			margin-left:150px;
+			transform:scale(.7);
+		}
+		.path {
+			position:absolute;
+			margin-top:50px;
+			margin-left:150px;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 50px 300px 50px;
+			border-color:transparent transparent var(--path-color) transparent;
+		}
+		.house {
+			position:absolute;
+			width:200px;
+			height:150px;
+			background:var(--house-color);
+			border-bottom:30px solid var(--house-bottom-color);
+			margin-top:70px;
+			margin-left:100px;
+			transform:scale(.5);
+		}
+		.house:after {
+			content:'';
+			position:absolute;
+			display:block;
+			width:60px;
+			height:40px;
+			background:var(--house-window-color);
+			margin-top:45px;
+			margin-left:120px;
+			border:1px solid var(--house-window-border-color);
+		}
+		.door {
+			position:absolute;
+			width:50px;
+			height:120px;
+			background:var(--house-door-color);
+			margin-top:30px;
+			margin-left:35px;
+		}
+		.door:after {
+			content:'';
+			position:absolute;
+			display:block;
+			width:10px;
+			height:4px;
+			background:var(--house-door-knob-color);
+			margin-left:37px;
+			margin-top:48px;
+		}
+		.chimney {
+			content:'';
+			position:absolute;
+			display:block;
+			background:var(--house-chimney-color);
+			width:30px;
+			height:70px;
+			margin-top:-100px;
+			margin-left:150px;
+		}
+		.roof {
+			content:'';
+			position:absolute;
+			display:block;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 120px 120px 120px;
+			border-color:transparent transparent var(--house-roof-border-color) transparent;
+			margin-left:-20px;
+			margin-top:-120px;
+		}
+		.roof:after {
+			content:'';
+			position:absolute;
+			display:block;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 100px 100px 100px;
+			border-color:transparent transparent var(--house-roof-color) transparent;
+			margin-left:-100px;
+			margin-top:21px;
+		}
+		.tree {
+			background:var(--tree-stem-color);
+			position:absolute;
+			width:15px;
+			height:40px;
+			font-size:0;
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+		}
+		.leaf {
+			display:flex;
+			margin-bottom:30px;
+		}
+		.leaf:before {
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 0 100px 50px;
+			border-color:transparent transparent var(--tree-left-color) transparent;
+			margin-top:-125px;
+			margin-left:-43px;
+		}
+		.leaf:after {
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 50px 100px 0;
+			border-color:transparent transparent var(--tree-right-color) transparent;
+			margin-top:-125px;
+		}
+		.tree#zero {
+			margin-top:150px;
+			margin-left:44px;
+		}
+		.tree#one {
+			margin-top:150px;
+			margin-left:44px;
+			transform:scale(.6);
+		}
+		.tree#two {
+			margin-top:170px;
+			margin-left:350px;
+			transform:scale(.6);
+		}
+		.tree#three {
+			margin-top:170px;
+			margin-left:77px;
+			transform:scale(.6);
+		}
+		.tree#four {
+			margin-top:145px;
+			margin-left:300px;
+			transform:scale(.6);
+		}
+		.tree#five {
+			margin-top:240px;
+			margin-left:130px;
+			transform:scale(.8);
+		}
+		.tree#six {
+			margin-top:220px;
+			margin-left:40px;
+			transform:scale(.7);
+		}
+		.tree#seven {
+			margin-top:210px;
+			margin-left:330px;
+			transform:scale(.7);
+		}
+		.tree#eight {
+			margin-top:240px;
+			margin-left:257px;
+			transform:scale(.8);
+		}
+		.tree#nine {
+			margin-top:315px;
+			margin-left:85px;
+			transform:scale(.9);
+		}
+		.tree#ten {
+			margin-top:315px;
+			margin-left:300px;
+			transform:scale(.9);
+		}
+	</style>
 </head>
 
-<body class="border_challenge">
+<body class="shapes">
 
 <!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
 
@@ -28,8 +307,577 @@
 	</script>
 
 <!-- ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** -->
+	
+<!-- ******************************* CONTAINER ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>body or div holding the container and its contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 0;
+  background: var(--bg-color);
+}
+.container {
+  background: var(--container-color);
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  margin-top: 120px;
+}</pre>
+			</code>
+		</div>
+		<div class="container">
+		</div>
+		<div class="right">
+			<code>
+<pre>     :root{
+        --bg-color: #FFF9C4;
+        --container-color: #4CAF50;
+        --sun-color: #FFEB3B;
+        --sun-light-color: #FDD835;
+        --mountain-left-color: #BDBDBD;
+        --mountain-right-color: #9E9E9E;
+        --path-color: #66BB6A;
+        --house-bottom-color:#5D4037;
+        --house-window-color:lightblue;
+        --house-window-border-color:#9E9E9E;
+        --house-door-color:#4E342E;
+        --house-door-knob-color:white;
+        --house-chimney-color:#3E2723;
+        --house-roof-border-color:#3E2723;
+        --house-roof-color:#5D4037;
+        --tree-stem-color:#795548;
+        --tree-left-color:#388E3C;
+        --tree-right-color:#1B5E20;
+      }
+</pre>
+			</code>
+		</div>
+	</div>
+<!-- ******************************* SUN ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.sun {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: var(--sun-color);
+  border-radius: 100%;
+  margin-top: -100px;
+  margin-left: 90px;
+  box-shadow: 0 0 50px 20px var(--sun-light-color);
+}
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="sun"></div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* MOUNTAIN ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.mountain {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 200px 100px;
+  border-color: transparent;
+  border-bottom-color: var(--mountain-left-color); 
+}
+.mountain::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100px 200px 0;
+  border-color: transparent;
+  border-bottom-color: var(--mountain-right-color); 
+}
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="mountain"></div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* 4 MOUNTAINS ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.m_one {
+  margin-top: -100px;
+  margin-left: 70px;
+  transform: scale(1.1);
+}
+.m_two {
+  margin-top: -40px;
+  margin-left: -1px;
+  transform: scale(.8);
+}
+.m_three {
+  margin-top: -50px;
+  margin-left: 194px;
+}
+.m_four {
+  margin-top: -80px;
+  margin-left: 150px;
+  transform: scale(.7);
+}</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="mountain m_one"></div>
+			<div class="mountain m_two"></div>
+			<div class="mountain m_four"></div>
+			<div class="mountain m_three"></div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* PATH ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.path {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 300px 50px;
+  border-color: transparent;
+  border-bottom-color: var(--path-color);
+}</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="path"></div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* HOUSE ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.house {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  background: var(--house-color);
+  border-bottom: 30px solid var(--house-bottom-color);
+  margin-top: 70px;
+  margin-left: 100px;
+  transform: scale(.5);
+}
+.house:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 40px;
+  background: var(--house-window-color);
+  margin-top: 45px;
+  margin-left: 120px;
+  border: 1px solid var(--house-window-border-color);
+}
 
-https://codepen.io/nicolasraube/pen/OgoeGx	
+html: (chimney, roof and door nested)
+&lt;div class="house">
+  &lt;div class="chimney">&lt;/div>
+  &lt;div class="roof">&lt;/div>
+  &lt;div class="door">&lt;/div>
+&lt;/div>
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="house"></div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* HOUSE CHIMNEY ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.chimney {
+  content:'';
+  position:absolute;
+  display:block;
+  background:var(--house-chimney-color);
+  width:30px;
+  height:70px;
+  margin-top:-100px;
+  margin-left:150px;
+}
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="house">
+				<div class="chimney"></div>
+			</div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* HOUSE ROOF ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.roof {
+  content:'';
+  position:absolute;
+  display:block;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:0 120px 120px 120px;
+  border-color:transparent;
+  border-bottom-color:var(--house-roof-border-color)
+  margin-left:-20px;
+  margin-top:-120px;
+}
+.roof:after {
+  content:'';
+  position:absolute;
+  display:block;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:0 100px 100px 100px;
+  border-color:transparent;
+  border-bottom-color:var(--house-roof-color)
+  margin-left:-100px;
+  margin-top:21px;
+}
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="house">
+				<div class="roof"></div>
+			</div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* HOUSE DOOR ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.door {
+  position:absolute;
+  width:50px;
+  height:120px;
+  background:var(--house-door-color);
+  margin-top:30px;
+  margin-left:35px;
+}
+.door:after {
+  content:'';
+  position:absolute;
+  display:block;
+  width:10px;
+  height:4px;
+  background:var(--house-door-knob-color);
+  margin-left:37px;
+  margin-top:48px;
+}
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="house">
+				<div class="door"></div>
+			</div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+
+<!-- ******************************* TREE ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.tree {
+  background:var(--tree-stem-color);
+  position:absolute;
+  width:15px;
+  height:40px;
+  font-size:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+the tree in the example also has
+margin-top:150px;
+margin-left:44px;
+so it is a bit more off the edge.
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="tree" id="zero">
+			</div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+<!-- ******************************* TREE LEAF ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.leaf {
+display:flex;
+margin-bottom:30px;
+}
+.leaf:before {
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:0 0 100px 50px;
+  border-color:transparent;
+  border-bottom-color:var(--tree-left-color);
+  margin-top:-125px;
+  margin-left:-43px;
+}
+.leaf:after {
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:0 50px 100px 0;
+  border-color:transparent;
+  border-bottom-color:var(--tree-right-color);
+  margin-top:-125px;
+}
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="tree" id="zero">
+				<div class="leaf"></div>
+			</div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+
+<!-- ******************************* TREE 3 LEAVES ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>
+html: (3 leaves nested)
+
+&lt;div class="tree">
+  &lt;div class="leaf">&lt;/div>
+  &lt;div class="leaf">&lt;/div>
+  &lt;div class="leaf">&lt;/div>
+&lt;/div>
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="tree" id="zero">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+		</div>
+		<div class="right nana">
+			See also: <a href="https://codepen.io/polinovskyi/pen/rVqjKa" target="_blank">Effect of flex on pseudoelements</a>.<br />
+			Browsers treat ::before and ::after as flex items, if the element has display flex!
+		</div>
+	</div>
+
+<!-- ******************************* 10 TREES ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>.tree#one {
+  margin-top:150px;
+  margin-left:44px;
+  transform:scale(.6);
+}
+.tree#two {
+  margin-top:170px;
+  margin-left:350px;
+  transform:scale(.6);
+}
+etc
+
+html: 10 trees
+
+&lt;div class="tree" id="one">
+  &lt;div class="leaf">&lt;/div>
+  &lt;div class="leaf">&lt;/div>
+  &lt;div class="leaf">&lt;/div>
+&lt;/div>
+&lt;div class="tree" id="two">
+  &lt;div class="leaf">&lt;/div>
+  &lt;div class="leaf">&lt;/div>
+  &lt;div class="leaf">&lt;/div>
+&lt;/div>
+etc
+</pre>
+			</code>
+		</div>
+		<div class="container">
+			<div class="tree" id="one">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="two">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="three">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="four">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="five">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="six">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="seven">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="eight">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="nine">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="ten">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+
+
+	<div id="result">
+		<div class="container">
+  	
+			<div class="sun"></div>
+		
+			<div class="mountain m_one"></div>
+			<div class="mountain m_two"></div>
+			<div class="mountain m_four"></div>
+			<div class="mountain m_three"></div>
+  	
+			<div class="path"></div>
+		
+			<div class="house">
+				<div class="chimney"></div>
+				<div class="roof"></div>
+				<div class="door"></div>
+			</div>
+		
+			<div class="tree" id="one">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="two">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="three">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="four">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="five">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="six">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="seven">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="eight">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="nine">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree" id="ten">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+		</div>
+	</div>
+
+<!-- ***** FOOTER ***** FOOTER ***** FOOTER ***** FOOTER ***** -->
+
+	<footer>
+		<a href="https://codepen.io/nicolasraube/pen/OgoeGx" target="_blank">
+			Inspired by Nicolas Raube's Flat Forest on CodePen</a>
+	</footer>
+	
 </body>
 </html>
 
