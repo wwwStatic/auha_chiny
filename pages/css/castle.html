@@ -10,9 +10,9 @@
   <meta name= "keywords" content="HTML, CSS, Python, Javascript" />
   <meta name="author" content="wwwebsites" />
   <meta name="copyright" content="2016, wwwebsites" />
-  <title>CSS Shapes</title>
+  <title>CSS Castle</title>
   <link rel="stylesheet" media="all" href="../../stylesheets/shared.css" />
-  <link rel="stylesheet" media="all" href="../../stylesheets/boat.css" />
+  <link rel="stylesheet" media="all" href="../../stylesheets/css.css" />
   <script src="../../javascripts/index.js"></script>
   <script src="../../javascripts/include.js"></script>
   <style>
@@ -47,6 +47,14 @@
 		h1{
 			font-size: 125%;
 			margin: -3vw 0 3vw;
+		}
+		h1 a{
+			font-size: 100%;
+			text-decoration: none;
+			color: #666666;
+		}
+		h1 a:hover{
+			color: white;
 		}
 		body.shapes .steps, body.shapes .result{
 			display:flex;
@@ -300,16 +308,24 @@
 <!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
 
   <div w3-include-html="menu.html"></div>
-  <div w3-include-html="menu_boat.html"></div>
+  <div w3-include-html="menu_css.html"></div>
 	<script>
 	w3.includeHTML();
 	</script>
 
 <!-- ***** CONTENT ***** CONTENT ***** CONTENT ***** CONTENT ***** -->
 	
-	<h1>Beautiful work by Nicolas Raube, great for understanding<br />flexbox, borders and ::before and ::after pseudoelements</h1>
+	<h1>Inspired by <a href="https://codepen.io/nicolasraube/pen/OgoeGx" target="_blank">Nicolas Raube's "Flat Forest"</a>, great for understanding<br />flexbox, borders, backgrounds and ::before &amp; ::after pseudoelements</h1>
 
 	<div class="result">
+		<div class="left">
+			<code>
+<pre>This was done with div elements
+and CSS only!
+Learn how and try something yourself.
+</pre>
+			</code>
+		</div>
 		<div class="container">
   	
 			<div class="sun"></div>
@@ -377,6 +393,8 @@
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
+		</div>
+		<div class="right">
 		</div>
 	</div>
 
