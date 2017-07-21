@@ -48,21 +48,16 @@
 			font-size: 125%;
 			margin: -3vw 0 3vw;
 		}
-		body.shapes .steps, body.shapes #result{
-			height:50vh;
-			height:520px;
+		body.shapes .steps, body.shapes .result{
 			display:flex;
 			justify-content:center;
 			align-items:center;
 			margin:0;
+			margin-bottom: 1vw;
 			font-size:0;
 			background:var(--bg-color);
 		}
-		body.shapes .steps{
-			height: auto;
-			margin-bottom: 1vw;
-		}
-		body.shapes div.left, body.shapes div.right{
+		body.shapes div.left, body.shapes div.right, body.result div.left{
 			text-align: left;
 			width:400px;
 			height:400px;
@@ -314,6 +309,77 @@
 	
 	<h1>Beautiful work by Nicolas Raube, great for understanding<br />flexbox, borders and ::before and ::after pseudoelements</h1>
 
+	<div class="result">
+		<div class="container">
+  	
+			<div class="sun"></div>
+		
+			<div class="mountain m_one"></div>
+			<div class="mountain m_two"></div>
+			<div class="mountain m_four"></div>
+			<div class="mountain m_three"></div>
+  	
+			<div class="path"></div>
+		
+			<div class="house">
+				<div class="chimney"></div>
+				<div class="roof"></div>
+				<div class="door"></div>
+			</div>
+		
+			<div class="tree t_one">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_two">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_three">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_four">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_five">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_six">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_seven">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_eight">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_nine">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_ten">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+		</div>
+	</div>
+
 <!-- ******************************* CONTAINER ******************************** -->
 	<div class="steps">
 		<div class="left">
@@ -339,7 +405,7 @@
 		</div>
 		<div class="right">
 			<code>
-<pre>     :root{
+<pre>      :root{
         --bg-color: #FFF9C4;
         --container-color: #4CAF50;
         --sun-color: #FFEB3B;
@@ -805,8 +871,44 @@ etc
 		</div>
 	</div>
 
+<!-- ******************************* TUTTI ******************************** -->
+	<div class="steps">
+		<div class="left">
+			<code>
+<pre>html:
 
-	<div id="result">
+&lt;div class="container">
+
+  &lt;div class="sun">&lt;/div>
+  
+  &lt;div class="mountain m_one">&lt;/div>
+  &lt;div class="mountain m_two">&lt;/div>
+  &lt;div class="mountain m_four">&lt;/div>
+  &lt;div class="mountain m_three">&lt;/div>
+  
+  &lt;div class="path">&lt;/div>
+  
+  &lt;div class="house">
+    &lt;div class="chimney">&lt;/div>
+    &lt;div class="roof">&lt;/div>
+    &lt;div class="door">&lt;/div>
+  &lt;/div>
+  
+  &lt;div class="tree t_one">
+    &lt;div class="leaf">&lt;/div>
+    &lt;div class="leaf">&lt;/div>
+    &lt;div class="leaf">&lt;/div>
+  &lt;/div>
+  &lt;div class="tree t_two">
+    &lt;div class="leaf">&lt;/div>
+    &lt;div class="leaf">&lt;/div>
+    &lt;div class="leaf">&lt;/div>
+  &lt;/div>
+etc
+&lt;/div>
+</pre>
+			</code>
+		</div>
 		<div class="container">
   	
 			<div class="sun"></div>
@@ -874,6 +976,684 @@ etc
 				<div class="leaf"></div>
 				<div class="leaf"></div>
 			</div>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+
+<!-- ******************************* EXERCISE ******************************** -->
+	
+	<style>
+		:root{
+			--x-container-color: #03B516;
+			--x-sun-color: #FDEA06;
+			--x-sun-light-color: #FDBD06;
+			--x-sun-color:#FFEB3B;
+			--x-sun-light-color:#FDD835;
+			--x-cloud-color: #ececec;
+			--mountain-snow-color: snow;
+			--castle-color: #AB94CF;
+			--castle-wall-color: #F3A8C1;
+			--castle-flag-color: #CFAFFB;
+			--castle-flag-color: #dFbFFf;
+			--castle-wall-blocks-color: #F6C3D7;
+		}
+		body.shapes .x-container{
+			background:var(--x-container-color);
+			width:700px;
+			height:400px;
+			border-radius:100%;
+			margin-top:120px;
+		}
+		.x-container .sun{
+			position:absolute;
+			width:150px;
+			height:150px;
+			background:var(--x-sun-color);
+			border-radius:100%;
+			margin-top:-110px;
+			margin-left:20px;
+			box-shadow:40px 40px 120px 60px var(--x-sun-light-color);
+		}
+		.x-container .cloud{
+			position:absolute;
+			background:var(--x-cloud-color);
+			width:120px;
+			height:40px;
+			border-radius:100%;
+		}
+		.x-container .cloud:before, .x-container .cloud:after{
+			content: '';
+			position:absolute;
+			display: block;
+			background:var(--x-cloud-color);
+			width:80px;
+			height:40px;
+			border-radius:100%;
+			margin-top:-12px;
+			margin-left: 10px;
+		}
+		.x-container .cloud:after{
+			width:50px;
+			height:40px;
+			border-radius:100%;
+			margin-top:-15px;
+			margin-left: 65px;
+		}
+		.x-container .c_1{
+			margin-top:-50px;
+			margin-left: -100px;
+			transform: scale(0.65);
+		}
+		.x-container .c_2{
+			margin-top:-80px;
+			margin-left: -50px;
+		}
+		.x-container .c_3{
+			margin-top:0;
+			margin-left: -60px;
+			transform: scale(0.9);
+		}
+		.x-container .c_4{
+			margin-top: -70px;
+			margin-left: 145px;
+			transform: scale(0.9);
+		}
+		.x-container .c_5{
+			margin-top:-105px;
+			margin-left: 270px;
+			transform: scale(0.8);
+		}
+/******************************* MOUNTAINS ********************************/
+		.x-container .mountain {
+		  position: absolute;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 0 100px 200px 0;
+		  border-color: transparent;
+		  border-bottom-color: var(--mountain-right-color); 
+		}
+		.x-container .mountain::before {
+		  content: '';
+		  position: absolute;
+			left: -100px;
+		  display: block;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 0 0 200px 100px;
+		  border-color: transparent;
+		  border-bottom-color: var(--mountain-left-color); 
+		}	
+		.x-container .mountain::after {
+		  content: '';
+		  position: absolute;
+			left: -20px;
+		  display: block;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 0 20px 40px 20px;
+		  border-color: transparent;
+		  border-bottom-color: var(--mountain-snow-color); 
+		}
+		.x-container .m_one {
+		  margin-top: -100px;
+		  margin-left: 400px;
+		  transform: scale(1.1);
+		}
+		.x-container .m_two {
+		  margin-top: -40px;
+		  margin-left: 468px;
+		  transform: scale(.8);
+		}
+		.x-container .m_three {
+		  margin-top: -65px;
+		  margin-left: 330px;
+		  transform: scale(0.9);
+		}
+		.x-container .m_four {
+		  margin-top: -65px;
+		  margin-left: 280px;
+		  transform: scale(1.1);
+		}	
+		.x-container .m_five {
+		  margin-top: -50px;
+		  margin-left: 195px;
+		  transform: scale(.8);
+		}	
+/******************************* TREES ********************************/
+		.x-container .tree {
+			background:var(--tree-stem-color);
+			position:absolute;
+			width:15px;
+			height:40px;
+			font-size:0;
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+		}
+		.x-container .leaf {
+			display:flex;
+			margin-bottom:30px;
+		}
+		.x-container .leaf:before {
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 0 100px 50px;
+			border-color:transparent transparent var(--tree-left-color) transparent;
+			margin-top:-125px;
+			margin-left:-43px;
+		}
+		.x-container .leaf:after {
+			content:'';
+			display:block;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 50px 100px 0;
+			border-color:transparent transparent var(--tree-right-color) transparent;
+			margin-top:-125px;
+		}
+		.x-container .t_one {
+			margin-top:150px;
+			margin-left:48px;
+			transform:scale(.6);
+		}
+		.x-container .t_two {
+			margin-top:110px;
+			margin-left:110px;
+			transform:scale(.6);
+		}
+		.x-container .t_three {
+			margin-top:170px;
+			margin-left:85px;
+			transform:scale(.6);
+		}
+		.x-container .t_four {
+			margin-top:145px;
+			margin-left:200px;
+			transform:scale(.6);
+		}
+		.x-container .t_five {
+			margin-top:200px;
+			margin-left:145px;
+			transform:scale(.8);
+		}
+		.x-container .t_six {
+			margin-top:220px;
+			margin-left:35px;
+			transform:scale(.7);
+		}
+/******************************* FLOWERS ********************************/
+		.x-container .flower{
+			position: absolute;
+			width: 6px;
+			height: 100px;
+			background: green;
+		}
+		.x-container .flower:before, .x-container .flower:after {
+		  content: '';
+		  position: absolute;
+		  display: block;
+		  width: 0;
+		  height: 0;
+		  background: none;
+			border-style: solid;
+			border-width: 24px 20px 48px;
+			border-color: transparent;
+			border-right-color: green;
+		  margin-top: 24px;
+		  margin-left: -44px;
+			transform: rotate(-15deg);
+		}
+		.x-container .flower:after {
+			border-width: 24px 0 48px 20px;
+			border-color: transparent;
+			border-left-color: green;
+		  margin-top: 22px;
+		  margin-left:10px;
+			transform: rotate(15deg);
+		}
+		.x-container .petalTop {
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			border-radius: 100%;
+		  margin-top: -44px;
+		  margin-left: -9px;
+		}
+		.x-container .petalBottom {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background-color: yellow;
+			border-radius: 100%;
+		  margin-top: -21px;
+		  margin-left: -7px;
+		}
+		.x-container .petalTop:before, .x-container .petalTop:after, .x-container .petalBottom:before, .x-container .petalBottom:after {
+		  content: '';
+			position: absolute;
+		  display: block;
+			width: 24px;
+			height: 24px;
+			border-radius: 100%;
+		}
+		.x-container .petalTop:before{
+		  margin-top: 15px;
+		  margin-left: -21px;
+		}
+		.x-container .petalTop:after {
+		  margin-top: 15px;
+		  margin-left: 21px;
+		}
+		.x-container .petalBottom:before {
+		  margin-top: 16px;
+		  margin-left: -15px;
+		}
+		.x-container .petalBottom:after {
+		  margin-top: 16px;
+		  margin-left: 11px;
+		}
+		.x-container .petalTop, .x-container .petalTop:before, .x-container .petalTop:after, .x-container .petalBottom:before, .x-container .petalBottom:after{
+			background-color: red;
+		}
+		.x-container .petalTop.blue, .x-container .petalTop.blue:before, .x-container .petalTop.blue:after, .x-container .petalBottom.blue:before, .x-container .petalBottom.blue:after{
+			background-color: blue;
+		}
+		.x-container .petalTop.orange, .x-container .petalTop.orange:before, .x-container .petalTop.orange:after, .x-container .petalBottom.orange:before, .x-container .petalBottom.orange:after{
+			background-color: orange;
+		}
+		.x-container .petalTop.white, .x-container .petalTop.white:before, .x-container .petalTop.white:after, .x-container .petalBottom.white:before, .x-container .petalBottom.white:after{
+			background-color: white;
+		}
+		#f_one{
+		  margin-top: 95px;
+		  margin-left: 455px;
+			transform: scale(0.28);
+		}
+		#f_two{
+		  margin-top: 95px;
+		  margin-left: 480px;
+			transform: scale(0.3);
+		}
+		#f_three{
+		  margin-top: 110px;
+		  margin-left: 505px;
+			transform: scale(0.33);
+		}
+		#f_four{
+		  margin-top: 100px;
+		  margin-left: 530px;
+			transform: scale(0.3);
+		}
+		#f_five{
+		  margin-top: 125px;
+		  margin-left: 460px;
+			transform: scale(0.35);
+		}
+		#f_six{
+		  margin-top: 130px;
+		  margin-left: 485px;
+			transform: scale(0.4);
+		}
+		#f_seven{
+		  margin-top: 135px;
+		  margin-left: 520px;
+			transform: scale(0.4);
+		}
+		#f_eight{
+		  margin-top: 130px;
+		  margin-left: 555px;
+			transform: scale(0.45);
+		}
+		#f_nine{
+		  margin-top: 155px;
+		  margin-left: 440px;
+			transform: scale(0.5);
+		}
+		#f_ten{
+		  margin-top: 170px;
+		  margin-left: 475px;
+			transform: scale(0.5);
+		}
+		#f_eleven{
+		  margin-top: 165px;
+		  margin-left: 510px;
+			transform: scale(0.4);
+		}
+		#f_twelve{
+		  margin-top: 155px;
+		  margin-left: 545px;
+			transform: scale(0.4);
+		}
+/******************************* ROAD ********************************/
+		.road{
+			position:absolute;
+			margin-top:68px;
+			margin-left:276px;
+			width:0;
+			height:0;
+			border-style:solid;
+			border-width:0 50px 290px 50px;
+			border-color:transparent;
+			border-bottom-color: var(--path-color);
+			transform: skewX(-40deg);
+		}
+/******************************* CASTLE ********************************/
+		.castle{
+		  position: absolute;
+		  margin-top: 60px;
+		  margin-left: 318px;
+		  transform: scale(0.5);
+		}
+		.castle .tower{
+			position: absolute;
+			width: 90px;
+			height: 160px;
+			background-color: var(--castle-color);
+		}
+		.castle .tower:before, .castle .tower:after{
+			content: '';
+			position: absolute;
+			display: block;
+			background-color: var(--castle-flag-color);
+			width: 30px;
+			height: 30px;
+			border-radius: 100% 100% 0 0;
+		  margin-top: 20px;
+		  margin-left: 30px;
+		}
+		.castle .tower:after{
+			width: 30px;
+			height: 20px;
+			border-radius: 0;
+		  margin-top: 50px;
+		}
+		.castle .tower .t_roof{
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 55px 130px 55px;
+			border-color: transparent;
+			border-bottom-color: var(--castle-wall-color);
+		  margin-top: -130px;
+		  margin-left: -10px;
+		}
+		.castle .tower .t_roof:before{ /* flag pole */
+			content: '';
+			position: absolute;
+			display: block;
+			width: 3px;
+			height: 60px;
+			background-color: var(--castle-flag-color);
+		  margin-top: -60px;
+		  margin-left: -2px;
+			border-radius: 5px;
+		}
+		.castle .tower .t_roof:after{ /* flag */
+			content: '';
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 18px 0 18px 55px;
+			border-color: transparent;
+			border-left-color: var(--castle-flag-color);
+		  margin-top: -55px;
+		  margin-left: -2px;
+		}
+		#t_left, #t_right{
+			transform: scale(0.8);
+			margin-top: 15px;
+			margin-left: -130px;
+		}
+		#t_right{
+			margin-left: 130px;
+		}
+		.castle .wall{
+			position: absolute;
+			width: 422px;
+			height: 145px;
+			background-color: var(--castle-wall-color);
+			border-top: 25px dotted var(--castle-wall-color);
+			background-clip: padding-box;
+			margin-top: 125px;
+			margin-left: -166px;
+			text-align: left;
+		}
+		.castle .wall .block{
+			position: absolute;
+			width: 25px;
+			height: 15px;
+			background-color: var(--castle-wall-blocks-color);
+		}
+		.castle .wall .block.row1{
+			margin-top: 15px;
+		}
+		.castle .wall .block.row2{
+			margin-top: 45px;
+		}
+		.castle .wall .block.row3{
+			margin-top: 75px;
+		}
+		.castle .wall .block.row4{
+			margin-top: 105px;
+		}
+		.castle .wall .block.cole1{
+			margin-left: 0;
+		}
+		.castle .wall .block.cole2{
+			margin-left: 50px;
+		}
+		.castle .wall .block.cole3{
+			margin-left: 100px;
+		}
+		.castle .wall .block.cole4{
+			margin-left: 150px;
+		}
+		.castle .wall .block.cole5{
+			margin-left: 247px;
+		}
+		.castle .wall .block.cole6{
+			margin-left: 297px;
+		}
+		.castle .wall .block.cole7{
+			margin-left: 347px;
+		}
+		.castle .wall .block.cole8{
+			margin-left: 397px;
+		}
+		.castle .wall .block.colo1{
+			margin-left: 25px;
+		}
+		.castle .wall .block.colo2{
+			margin-left: 75px;
+		}
+		.castle .wall .block.colo3{
+			margin-left: 125px;
+		}
+		.castle .wall .block.colo6{
+			margin-left: 272px;
+		}
+		.castle .wall .block.colo7{
+			margin-left: 322px;
+		}
+		.castle .wall .block.colo8{
+			margin-left: 372px;
+		}
+		.castle .gate{
+			position: absolute;
+			width: 88px;
+			height: 100px;
+			background-color: #AB94CF;
+			/*background-image: linear-gradient(90deg, transparent 86%, rgba(207,175,251,1) 14%);*/
+			background-image: linear-gradient(90deg, transparent 86%, var(--castle-flag-color) 14%);
+			background-size: 15px 100px;
+			border-radius: 100% 100% 0 0;
+			margin-top: 170px;
+			margin-left: 2px;
+		}
+</style>
+		
+	<div class="result" style="background-color:skyblue;">	
+		<div class="left">
+			<code>
+<pre>Give it a go! 
+Try something. 
+I did this. 
+Only divs and css allowed, 
+no images, no javascript...
+</pre>
+			</code>
+		</div>
+		<div class="x-container">
+			<div class="sun"></div>
+			<div class="cloud c_1"></div>
+			<div class="cloud c_2"></div>
+			<div class="cloud c_3"></div>
+			<div class="cloud c_4"></div>
+			<div class="cloud c_5"></div>
+			<div class="road"></div>
+
+			<div class="mountain m_one"></div>
+  		<div class="mountain m_two"></div>
+  		<div class="mountain m_three"></div>
+  		<div class="mountain m_four"></div>
+  		<div class="mountain m_five"></div>
+
+			<div class="tree t_one">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_two">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_three">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_four">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_five">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			<div class="tree t_six">
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+				<div class="leaf"></div>
+			</div>
+			
+			<div class="castle">
+				<div class="tower">
+					<div class="t_roof"></div>
+				</div>
+				<div class="tower"id="t_left">
+					<div class="t_roof"></div>
+				</div>
+				<div class="tower"id="t_right">
+					<div class="t_roof"></div>
+				</div>
+				<div class="wall">
+					<div class="block row1 cole1"></div>
+					<div class="block row1 cole2"></div>
+					<div class="block row1 cole3"></div>
+					<div class="block row1 cole4"></div>
+					<div class="block row1 cole5"></div>
+					<div class="block row1 cole6"></div>
+					<div class="block row1 cole7"></div>
+					<div class="block row1 cole8"></div>
+
+					<div class="block row2 colo1"></div>
+					<div class="block row2 colo2"></div>
+					<div class="block row2 colo3"></div>
+					<div class="block row2 colo6"></div>
+					<div class="block row2 colo7"></div>
+					<div class="block row2 colo8"></div>
+
+					<div class="block row3 cole1"></div>
+					<div class="block row3 cole2"></div>
+					<div class="block row3 cole3"></div>
+					<div class="block row3 cole6"></div>
+					<div class="block row3 cole7"></div>
+					<div class="block row3 cole8"></div>
+
+					<div class="block row4 colo1"></div>
+					<div class="block row4 colo2"></div>
+					<div class="block row4 colo3"></div>
+					<div class="block row4 colo6"></div>
+					<div class="block row4 colo7"></div>
+					<div class="block row4 colo8"></div>
+				</div>
+				<div class="gate"></div>
+			</div>
+
+			<div class="flower" id="f_one">
+				<div class="petalTop blue"></div>
+				<div class="petalBottom blue"></div>
+			</div>
+			<div class="flower" id="f_two">
+				<div class="petalTop orange"></div>
+				<div class="petalBottom orange"></div>
+			</div>
+			<div class="flower" id="f_three">
+				<div class="petalTop white"></div>
+				<div class="petalBottom white"></div>
+			</div>
+			<div class="flower" id="f_four">
+				<div class="petalTop blue"></div>
+				<div class="petalBottom blue"></div>
+			</div>
+			<div class="flower" id="f_five">
+				<div class="petalTop"></div>
+				<div class="petalBottom"></div>
+			</div>
+			<div class="flower" id="f_six">
+				<div class="petalTop blue"></div>
+				<div class="petalBottom blue"></div>
+			</div>
+			<div class="flower" id="f_seven">
+				<div class="petalTop orange"></div>
+				<div class="petalBottom orange"></div>
+			</div>
+			<div class="flower" id="f_eight">
+				<div class="petalTop white"></div>
+				<div class="petalBottom white"></div>
+			</div>
+			<div class="flower" id="f_nine">
+				<div class="petalTop white"></div>
+				<div class="petalBottom white"></div>
+			</div>
+			<div class="flower" id="f_ten">
+				<div class="petalTop orange"></div>
+				<div class="petalBottom orange"></div>
+			</div>
+			<div class="flower" id="f_eleven">
+				<div class="petalTop"></div>
+				<div class="petalBottom"></div>
+			</div>
+			<div class="flower" id="f_twelve">
+				<div class="petalTop blue"></div>
+				<div class="petalBottom blue"></div>
+			</div>
+		</div>
+		<div class="right">
 		</div>
 	</div>
 
