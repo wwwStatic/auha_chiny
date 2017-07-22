@@ -134,7 +134,7 @@
 	
 	<p class="fifth showNext"
 	   style="cursor:pointer;"
-	   onclick="this.style.display='none'; document.querySelectorAll('.sixth').forEach(function(content){content.style.display='block';});">next</p>
+	   onclick="this.style.display='none'; document.querySelectorAll('.sixth').forEach(function(content){content.style.display='block';}); document.querySelectorAll('.illustration.sixth img').forEach(function(content){content.style.display='inline-block';});">next</p>
 
 <!-- ***** NANA INSTRUCTION EQUILATERAL FORMULA ***** EQUILATERAL FORMULA ***** -->
 
@@ -150,11 +150,11 @@
 			<br /><span style="color:blue;">Shortest side square</span> + <span style="color:purple;">middlest side square</span> = <span style="color:green;">longest side square</span>
 			<br />OR: <span style="color:green;">Longest side square</span> - <span style="color:blue;">shortest side square</span> = <span style="color:purple;">middlest side square</span>
 			<br /><span style="color:green;">15 x 15 = 225</span>
-			<br /><span style="color:blue;">7.5 x 7.5 = 56</span>
+			<br /><span style="color:blue;">7.5 x 7.5 = 56 (rounded that is...)</span>
 			<br /><span style="color:green;">225</span> - <span style="color:blue;">56</span> = <span style="color:purple;">169</span>
 			<br /><span style="color:purple;">Middlest square area = 169</span>
 			<br /><span style="color:purple;">Middlest side = 13</span>
-			<br />To be honest, I have been cheating a tiny bit, the real answer would be a tiny little bit less than 13, but you haven't learned to work with decimal points yet, and it is very close to 13!
+			<br />
 		</p>
 	</div>
 
@@ -162,6 +162,15 @@
 		<img src="../../images/css/equilateral_triangle.png" />
 		<img src="../../images/css/equilateral_triangle_y.png" />
 		<img src="../../images/css/pythagoras_theorem_b.png" />
+	</div>
+	
+	<div class="instruction sixth">
+		<p>If Pythagoras is right, you should be able to make a red regular triangle with css, e.g.:
+			<br />border-top: 13vw solid red;
+			<br />border-left: 7.5vw solid transparent;
+			<br />border-right: 7.5vw solid transparent;
+			<br />It would point down.
+		</p>
 	</div>
 	
 	
