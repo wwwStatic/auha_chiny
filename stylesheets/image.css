@@ -1,9 +1,14 @@
-html, body.image{
-  background-color: #93cDdF;
+:root{
+	--image-bkg-blue: #93cDdF;
+	--image-menu-bkg-blue: #c8f5ff;
 }
-body.image #menu, body.image #submenu{
-  background-color: #c8f5ff; /* darker blue */
+html, body{
+  background-color: var(--image-bkg-blue);
 }
+body #menu, body #submenu, footer{
+  background-color: var(--image-menu-bkg-blue);
+}
+
 body.image .nana li{
 	clear: both;
 }

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
@@ -37,16 +39,12 @@
 		  --tree-left-color:#388E3C;
 		  --tree-right-color:#1B5E20;
 		}
-	  html, body.shapes{
+	  html, body.castle{
 	  	text-align: center;
-	    background-color: #72bfd1;
-	  }
-	  body.shapes #menu, body.shapes #submenu, footer{
-			background-color: #C8E5EC; /* lighter blue */
 	  }
 		h1{
 			font-size: 125%;
-			margin: -3vw 0 3vw;
+			margin: 0 0 3vw;
 		}
 		h1 a{
 			font-size: 100%;
@@ -56,7 +54,7 @@
 		h1 a:hover{
 			color: white;
 		}
-		body.shapes .steps, body.shapes .result{
+		body.castle .steps, body.castle .result{
 			display:flex;
 			justify-content:center;
 			align-items:center;
@@ -65,7 +63,7 @@
 			font-size:0;
 			background:var(--bg-color);
 		}
-		body.shapes div.left, body.shapes div.right, body.result div.left{
+		body.castle div.left, body.castle div.right{
 			text-align: left;
 			width:400px;
 			height:400px;
@@ -74,7 +72,7 @@
 			font-size: 70%;
 			padding-left: 1vw;
 		}
-		body.shapes .container{
+		body.castle .container{
 			background:var(--container-color);
 			width:400px;
 			height:400px;
@@ -303,7 +301,7 @@
 	</style>
 </head>
 
-<body class="shapes">
+<body class="castle">
 	
 <!-- ***** MENU ***** MENU ***** MENU ***** MENU ***** MENU ***** -->
 
@@ -1016,7 +1014,7 @@ etc
 			--castle-flag-color: #dFbFFf;
 			--castle-wall-blocks-color: #F6C3D7;
 		}
-		body.shapes .x-container{
+		body.castle .x-container{
 			background:var(--x-container-color);
 			width:700px;
 			height:400px;
@@ -1364,19 +1362,19 @@ etc
 			transform: skewX(-40deg);
 		}
 /******************************* CASTLE ********************************/
-		.castle{
+		.pinkCastle{
 		  position: absolute;
 		  margin-top: 60px;
 		  margin-left: 318px;
 		  transform: scale(0.5);
 		}
-		.castle .tower{
+		.pinkCastle .tower{
 			position: absolute;
 			width: 90px;
 			height: 160px;
 			background-color: var(--castle-color);
 		}
-		.castle .tower:before, .castle .tower:after{
+		.pinkCastle .tower:before, .pinkCastle .tower:after{
 			content: '';
 			position: absolute;
 			display: block;
@@ -1387,13 +1385,13 @@ etc
 		  margin-top: 20px;
 		  margin-left: 30px;
 		}
-		.castle .tower:after{
+		.pinkCastle .tower:after{
 			width: 30px;
 			height: 20px;
 			border-radius: 0;
 		  margin-top: 50px;
 		}
-		.castle .tower .t_roof{
+		.pinkCastle .tower .t_roof{
 			position: absolute;
 			width: 0;
 			height: 0;
@@ -1404,7 +1402,7 @@ etc
 		  margin-top: -130px;
 		  margin-left: -10px;
 		}
-		.castle .tower .t_roof:before{ /* flag pole */
+		.pinkCastle .tower .t_roof:before{ /* flag pole */
 			content: '';
 			position: absolute;
 			display: block;
@@ -1415,7 +1413,7 @@ etc
 		  margin-left: -2px;
 			border-radius: 5px;
 		}
-		.castle .tower .t_roof:after{ /* flag */
+		.pinkCastle .tower .t_roof:after{ /* flag */
 			content: '';
 			position: absolute;
 			display: block;
@@ -1436,7 +1434,7 @@ etc
 		#t_right{
 			margin-left: 130px;
 		}
-		.castle .wall{
+		.pinkCastle .wall{
 			position: absolute;
 			width: 422px;
 			height: 145px;
@@ -1447,67 +1445,67 @@ etc
 			margin-left: -166px;
 			text-align: left;
 		}
-		.castle .wall .block{
+		.pinkCastle .wall .block{
 			position: absolute;
 			width: 25px;
 			height: 15px;
 			background-color: var(--castle-wall-blocks-color);
 		}
-		.castle .wall .block.row1{
+		.pinkCastle .wall .block.row1{
 			margin-top: 15px;
 		}
-		.castle .wall .block.row2{
+		.pinkCastle .wall .block.row2{
 			margin-top: 45px;
 		}
-		.castle .wall .block.row3{
+		.pinkCastle .wall .block.row3{
 			margin-top: 75px;
 		}
-		.castle .wall .block.row4{
+		.pinkCastle .wall .block.row4{
 			margin-top: 105px;
 		}
-		.castle .wall .block.cole1{
+		.pinkCastle .wall .block.cole1{
 			margin-left: 0;
 		}
-		.castle .wall .block.cole2{
+		.pinkCastle .wall .block.cole2{
 			margin-left: 50px;
 		}
-		.castle .wall .block.cole3{
+		.pinkCastle .wall .block.cole3{
 			margin-left: 100px;
 		}
-		.castle .wall .block.cole4{
+		.pinkCastle .wall .block.cole4{
 			margin-left: 150px;
 		}
-		.castle .wall .block.cole5{
+		.pinkCastle .wall .block.cole5{
 			margin-left: 247px;
 		}
-		.castle .wall .block.cole6{
+		.pinkCastle .wall .block.cole6{
 			margin-left: 297px;
 		}
-		.castle .wall .block.cole7{
+		.pinkCastle .wall .block.cole7{
 			margin-left: 347px;
 		}
-		.castle .wall .block.cole8{
+		.pinkCastle .wall .block.cole8{
 			margin-left: 397px;
 		}
-		.castle .wall .block.colo1{
+		.pinkCastle .wall .block.colo1{
 			margin-left: 25px;
 		}
-		.castle .wall .block.colo2{
+		.pinkCastle .wall .block.colo2{
 			margin-left: 75px;
 		}
-		.castle .wall .block.colo3{
+		.pinkCastle .wall .block.colo3{
 			margin-left: 125px;
 		}
-		.castle .wall .block.colo6{
+		.pinkCastle .wall .block.colo6{
 			margin-left: 272px;
 		}
-		.castle .wall .block.colo7{
+		.pinkCastle .wall .block.colo7{
 			margin-left: 322px;
 		}
-		.castle .wall .block.colo8{
+		.pinkCastle .wall .block.colo8{
 			margin-left: 372px;
 		}
-		.castle .gate{
+		.pinkCastle .gate{
 			position: absolute;
 			width: 88px;
 			height: 100px;
@@ -1578,7 +1576,7 @@ no images, no javascript...
 				<div class="leaf"></div>
 			</div>
 			
-			<div class="castle">
+			<div class="pinkCastle">
 				<div class="tower">
 					<div class="t_roof"></div>
 				</div>

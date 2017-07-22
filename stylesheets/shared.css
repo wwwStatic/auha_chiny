@@ -1,13 +1,23 @@
+:root{
+	--page-bkg-basic: aquamarine;
+	--menu-bkg-basic: #00ffaa;
+	--menu-basic-a: #0000ff;
+	--menu-basic-hover: #e600e6;
+	--hermione-font: 'Amatic SC', cursive;
+	--nana-font: "Comic Sans MS", sans-serif;
+	--code-font: "Courier", monospace;
+}
 *{margin:0; border:none; padding:0; font-size: 1.45vw; box-sizing: border-box;}
 ul, ul li{list-style-type: none;}
 hr{margin: 1vw 0; border-bottom: 0.1vw solid black;}
-html{
-  font-family:'Amatic SC', cursive; 
-	background-color: aquamarine;
+html, body{
+  font-family: var(--hermione-font);
+	background-color: var(--page-bkg-basic);
 }
 body{
 	position: relative;
 	padding-bottom: 5vw;
+	min-height: 100vh;
 }
 .print{
 	display: none;
@@ -22,12 +32,12 @@ body{
 #menu, #submenu{
 	text-align: center;
 	padding: 1vw 0;
-	background-color: #00ffaa;
+	background-color: var(--menu-bkg-basic);
 	margin-bottom: 6vw;
 }
 #menu a, #submenu a, footer a{
 	font-size: 100%;
-	color: blue;
+	color: var(--menu-basic-a);
 	padding: 0.5vw 5vw;
 	text-decoration: none;
 }
@@ -35,7 +45,7 @@ footer a{
 	padding: 0;
 }
 #menu a:hover, #submenu a:hover, footer a:hover{
-	color:  #e600e6;
+	color: var(--menu-basic-hover);
 }
 #menu li, #submenu li{
 	font-size: 120%;
@@ -44,9 +54,8 @@ footer a{
 #submenu{
 	text-align: left;
   margin-top: -5.8vw;
-	padding-left: 1vw;
-	padding-top: 0.5vw;
-	padding-bottom: 0.5vw;
+	margin-bottom: 3vw;
+	padding: 0.5vw 0.5vw 0.5vw 1vw;
 	border-top: 0.1vw solid #eeeeee;
 }
 #submenu a{
@@ -57,7 +66,7 @@ footer a{
 /***** NANA ***** NANA ***** NANA ***** NANA ***** NANA ***** NANA *****/
 
 .nana, .nana *{
-	font-family: "Comic Sans MS", sans-serif;
+	font-family: var(--nana-font);
 }
 .nana, .nana ol{
 	padding: 0 2vw;
@@ -69,7 +78,7 @@ footer a{
 	padding: 0.5vw 0;
 }
 .nana pre, .nana code, .nana pre *, .nana code *{
-	font-family: "Courier", monospace;
+	font-family: var(--code-font);
 }
 .nana pre{
 	padding: 2vw;
@@ -81,6 +90,9 @@ footer a{
 .nana .terminal, .nana .terminal *{
 	color: #77FA50;
 }
+.nana .red, .nana .red *{
+	color: #cc0000;
+}
 .nana .smaller{
 	font-size: 80%;
 }
@@ -88,7 +100,31 @@ footer a{
 	font-size: 100%;
 }
 .nana .code, .nana .code *{
-	font-family: "Courier", monospace;
+	font-family: var(--code-font);
+}
+
+
+/***** LINKS ***** LINKS ***** LINKS ***** LINKS ***** LINKS ***** LINKS *****/
+
+body.links{
+	text-align: left;
+}
+body.links ul.nana h1{
+	font-size: 110%;
+	text-decoration: underline;
+	margin-bottom: 1vw;
+}
+body.links ul.nana li{
+	margin-left: 2vw;
+	list-style: disc outside none;
+}
+body.links ul.nana a{
+	color: var(--menu-basic-a);
+	text-decoration: none;
+}
+body.links ul.nana a:hover{
+	color: var(--menu-basic-hover);
+	text-decoration: underline;
 }
 
 /***** FOOTER ***** FOOTER ***** FOOTER ***** FOOTER ***** FOOTER *****/
@@ -97,8 +133,7 @@ footer{
 	position: fixed;
 	bottom: 0;
 	width: 100vw;
-	text-align: center;
-	padding: 1vw 0;
-	background-color: #d8d8d8;
+	text-align: left;
+	padding: 1vw 2vw;
 	margin-bottom: 0;
 }

@@ -1,35 +1,51 @@
-html, body.about{
+:root{
+	--about-bkg-orange: #FDA428;
+	--about-menu-bkg-orange: #Ffb438;
+}
+html, body{
+	text-align: center;
+	background-color: var(--about-bkg-orange);
+}
+body{
+	position: relative;
+}
+body #menu, body #submenu, footer{
+  background-color: var(--about-menu-bkg-orange);
+}
+/************************************ FAMILY ************************************/
+/************************************ FAMILY ************************************/
+html, body.family{
   background-color: #00ff00;
 }
-body.about #menu, body.about #submenu{
+body.family #menu, body.family #submenu{
   background-color: deepPink; 
 }
-body.about #menu a, body.about #submenu a{
+body.family #menu a, body.family #submenu a{
   color: aliceBlue; 
 }
-body.about #menu a:hover, body.about #submenu a:hover{
+body.family #menu a:hover, body.family #submenu a:hover{
   color: lawnGreen; 
 }
-body.about div.content{
+body.family div.content{
 	padding: 0 5vw;
 }
-body.about div.content h1{
+body.family div.content h1{
 	font-size: 500%;
 }
-body.about div.content table{
+body.family div.content table{
 	border-collapse: collapse;
 	text-align: left;
 	width:100%;
 	padding:3vw 0;
 }
-body.about div.content table td{
+body.family div.content table td{
 	border: 0.1vw solid deepPink;
 	padding: 0.5vw;
 }
-body.about div.content table td:first-child{
+body.family div.content table td:first-child{
 	width: 10%;
 	padding: 0;
 }
-body.about div.content table td:first-child img{
+body.family div.content table td:first-child img{
 	width: 100%;
 }

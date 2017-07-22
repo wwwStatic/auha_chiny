@@ -1,4 +1,22 @@
-body.border_challenge #math{
+:root{
+	--css-bkg-blue: #72bfd1;
+	--css-menu-bkg-blue: #C8E5EC;
+}
+html, body{
+  background-color: var(--css-bkg-blue);
+}
+body #menu, body #submenu, footer{
+  background-color: var(--css-menu-bkg-blue);
+}
+
+/******************************* BORDERS ***************************************/
+body.borders{
+  background-color: var(--page-bkg-basic);
+}
+body.borders #menu, body.borders #submenu, body.borders footer{
+  background-color: var(--menu-bkg-basic);
+}
+body.borders #math{
 	width: 200px;
 	font-size: 250%;
 	font-weight: bold;
@@ -10,17 +28,17 @@ body.border_challenge #math{
 	padding: 10px;
 	border: 10px ridge orange;
 }
-body.border_challenge #math a{
+body.borders #math a{
 	font-size: 100%;
 	font-weight: bold;
 	text-decoration: underline;
 	color: red;
 }
-body.border_challenge #math a:hover{
+body.borders #math a:hover{
 	color: blue;
 }
 
-body.border_challenge #science{
+body.borders #science{
 	font-size: 250%;
 	font-weight: bold;
 	font-style: italic;
@@ -32,7 +50,7 @@ body.border_challenge #science{
 	padding: 10px;
 	border: 10px dotted yellow;
 }
-body.border_challenge #music{
+body.borders #music{
 	width: 400px;
 	height: 200px;
 	font-size: 250%;
@@ -47,7 +65,7 @@ body.border_challenge #music{
 	border: 10px dashed black;
 	border-radius: 50px;
 }
-body.border_challenge #london{
+body.borders #london{
 	width: 200px;
 	height: 200px;
 	font-size: 250%;
@@ -61,5 +79,10 @@ body.border_challenge #london{
 	padding: 40px 10px;
 	border: 20px dotted pink;
 	border-radius: 200px;
+}
+
+/******************************* CASTLE ***************************************/
+body.castle footer{
+	text-align: center;
 }
 
