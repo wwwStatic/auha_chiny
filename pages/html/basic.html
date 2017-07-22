@@ -39,23 +39,40 @@
 		}
 		.nana .codePlus td:first-child{
 			font-size: 100%;
-			color: #990000;
+			color: #660000;
 			width: 15vw;
-			background-color: #dddddd;
+			background-color: #eeeeee;
 		}
 		ol li{
 			font-size: 85%;
 		}
+		p.hideOnClick{
+			color: #ff4500;
+			margin: 2vw 0;
+			cursor: pointer;
+		}
+		p.hideOnClick:hover{
+			color: #ff00ff;
+		}
 		.nana pre, .nana code{
 			font-size: 100%;
 			color: #990000;
-			background-color: #dddddd;
+			background-color: #eeeeee;
 		}
 		.blue{
-			color: blue;
+			color: #0000e6;
 		}
 		.red{
 			color: #990000;
+		}
+		.green{
+			color: #008000;
+		}
+		.orange{
+			color: #ff4500;
+		}
+		.purple{
+			color: #ff00ff;
 		}
 		#explanationDot{
 			position: absolute;
@@ -98,21 +115,27 @@
 			<table class="codePlus">
 				
 				<tr>
+					<td><code>&lt;!DOCTYPE html></code>
+					</td>
+					<td>line 1: Telling the browser: "Here comes a HTML5 document!" (safari, chrome and firefox are web browsers)
+					</td>
+				</tr>
+				<tr>
 					<td><code>&lt;html></code>
 					</td>
-					<td>Telling the browser: "Here comes a HTML document!" (web browsers: computer programmes that can read and display web pages, like safari)
+					<td>line 2: The HTML opening tag begins the html... 
 					</td>
 				</tr>
 				<tr>
 					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head></code>
 					</td>
-					<td>The HEAD is for information about your document. This is not going to be visible to your visitors.
+					<td>line 3: The HEAD is for information about your document. This is not going to be visible to your visitors.
 					</td>
 				</tr>
 				<tr>
 					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head></code>
 					</td>
-					<td>Closing tag: End of HEAD.
+					<td>line 4: Closing the HEAD tag. Tell the browser the head is finished.
 					</td>
 				</tr>
 				<tr>
@@ -124,43 +147,48 @@
 				<tr>
 					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body></code>
 					</td>
-					<td>The BODY is for the content you want to show to your visitors. This could be text, images, sound, films, links, games etc.
+					<td>line 5: The BODY is for the content you want to show to your visitors. This could be text, images, sound, films, links, games etc.
 					</td>
 				</tr>
 				<tr>
 					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body></code>
 					</td>
-					<td>Closing tag: End of BODY.
+					<td>line 6: Closing the BODY tag. End of body.
 					</td>
 				</tr>
 				<tr>
 					<td><code>&lt;/html></code>
 					</td>
-					<td>Closing tag: End of HTML document.
+					<td>line 7: Closing the HTML tag. End of document: The smallest HTML document has 7 lines...
 					</td>
 				</tr>
 
 			</table>
+			<p class="hideOnClick" onclick="this.style.display='none'; document.querySelectorAll('.t-1').forEach(function(content){content.style.display='block';});">Click to see more!</p>
 			
-			<h3>Task 1:</h3>
-			<ol type="a">
+			<h3 class="task t-1">Task 1:</h3>
+			<ol type="a" class="task t-1">
 				<li>In your Sites folder, make a new folder called "basic".</li>
-				<li>Open the folder in TextMate.</li>
+				<li>Open the folder in TextMate (or any text editor).</li>
 				<li>Make a file called "index.html".</li>
 				<li>Write a basic html page into your file, without looking at this page here.</li>
 				<li>Did you get it right?</li>
-				<li>Open the page in your browser. On a mac, the address is "localhost/~YOURNAME/basic/index.html". What do you see?</li>
+				<li>Open the page in your browser. On a mac, the address is "localhost/~[HOME]/basic/index.html". What do you see?
+					<br />(replace [HOME] with the name of your home folder)</li>
 			</ol>
 		
+			<p class="hideOnClick task t-1" onclick="this.style.display='none'; document.querySelectorAll('.i-2').forEach(function(content){content.style.display='block';});">Click to see more!</p>
+
 <!-- *********************************************************************** -->
 <!-- ***** BODY ***** BODY ***** BODY ***** BODY ***** BODY ***** BODY ***** -->
 <!-- *********************************************************************** -->
 
-		<h2>2. Let's add something to the body!</h2>
+		<h2 class="info i-2">2. Let's add something to the body!</h2>
 		
-		<p>Each opening tag tells the browser what is coming next. The closing tag tells the browser: Message over. The opening tag plus the content plus the closing tag is called a <span class="red">HTML element</span>. The example below has 3 HTML elements: the BODY element, which has 2 elements nested inside: a H1 element and a DIV element.</p><br />
+		<p class="info i-2">Each opening tag tells the browser what is coming next. The closing tag tells the browser: Message over. 
+			<br />The opening tag plus the content plus the closing tag is called a <span class="red">HTML element</span>. The example below has 3 HTML elements: the BODY element, which has 2 elements nested inside: a H1 element and a DIV element.</p><br />
 		
-			<table class="codePlus">
+			<table class="codePlus info i-2">
 				
 				<tr>
 					<td><code>&lt;body></code>
@@ -169,15 +197,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>Welcome!</code>
+					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>My Pets</code>
 					</td>
-					<td>"H1" or "h1" is a title tag (header). There are 6 types of header: h1-h6. H1 is the most important header in your document.
+					<td>line 2: "H1" or "h1" is a title tag (header). There are 6 types of header: h1-h6. H1 is the most important header in your document.
 					</td>
 				</tr>
 				<tr>
 					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1></code>
 					</td>
-					<td>H1 closing tag: End of H1. The browser now knows that "Welcome!" is meant to be shown as a main title.
+					<td>line 3: H1 closing tag: End of H1. Now the browser knows that "My Pets" is the main title.
 					</td>
 				</tr>
 				<tr>
@@ -189,63 +217,75 @@
 				<tr>
 					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div></code>
 					</td>
-					<td>This is a "DIV" or "div" tag. There is nothing in it at the moment.
+					<td>line 4: This is a "DIV" or "div" tag. There is nothing in it at the moment.
 					</td>
 				</tr>
 				<tr>
 					<td><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></code>
 					</td>
-					<td>DIV closing tag: End of DIV.
+					<td>line 5: DIV closing tag: End of DIV.
 					</td>
 				</tr>
 				<tr>
 					<td><code>&lt;/body></code>
 					</td>
-					<td>BODY closing tag: End of body.
+					<td>line 6: BODY closing tag: End of body.
 					</td>
 				</tr>
 
 			</table>
 			
-			<h3>Task 2:</h3>
-			<ol type="a">
-				<li>In your index.html file, add an "H1" and a "DIV" element. Don't peek!</li>
-				<li>Please write a short welcome message in your "div" element.</li>
-				<li>After you had a look at the result of your work, delete the "H1" closing tag (&lt;/h1>). Check what happens in the browser.</li>
+			<p class="hideOnClick info i-2" onclick="this.style.display='none'; document.querySelectorAll('.t-2').forEach(function(content){content.style.display='block';});">Click to see more!</p>
+
+			<h3 class="task t-2">Task 2:</h3>
+			<ol type="a" class="task t-2">
+				<li>In your index.html file, add an "H1" and a "DIV" element to the "BODY". Don't peek!</li>
+				<li>Please write something about your pets in the "div" element.</li>
+				<li>After you had a look at the result of your work, delete the "H1" closing tag (&lt;/h1>). Check what happens in the browser (reload the page).</li>
 				<li>Do you now understand why closing tags are important?</li>
 			</ol>
 		
+			<p class="hideOnClick task t-2" onclick="this.style.display='none'; document.querySelectorAll('.i-3').forEach(function(content){content.style.display='block';});">Click to see more!</p>
+
 <!-- *********************************************************************** -->
 <!-- ***** HEAD ***** HEAD ***** HEAD ***** HEAD ***** HEAD ***** HEAD ***** -->
 <!-- *********************************************************************** -->
 
-		<h2>3. Some things to put in the head:</h2>
+		<h2 class="info i-3">3. Some things to put in the head:</h2>
 
-		<p>In the head you can put information about your document (meta tags), you can add a title element, and you can tell the browser where to find other files that are needed for your page, like stylesheets and scripts.</p><br />
+		<p class="info i-3">In the head you can put information about your document <span class="blue">(meta tags)</span>, 
+			<br />you can add a <span class="orange">title element</span>, 
+			<br />and you can tell the browser where to find other <span class="purple">files that are needed</span> for your page, like stylesheets and scripts. 
+			<br />Look at this example of a HEAD:</p><br />
 
-<pre><code>&lt;head>
-    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<pre class="info i-3"><code>&lt;head>
+    <span class="blue">&lt;meta http-equiv="content-type" content="text/html; charset=utf-8" />
     &lt;meta http-equiv="content-language" content="en" />
     &lt;meta name="description" content="Hermione Lovelace's backstage tour of the web" />
-    &lt;meta name="keywords" content="HTML, CSS, Python, Javascript" />
+    &lt;meta name="keywords" content="HTML, CSS, Python, Javascript, Image editing" />
     &lt;meta name="author" content="Hermione Lovelace" />
-    &lt;meta name="copyright" content="2017, Hermione Lovelace" />
+    &lt;meta name="copyright" content="2017, Hermione Lovelace" /></span>
     
-    &lt;title>Welcome!&lt;/title>
+    <span class="orange">&lt;title></span>HTML for pets<span class="orange">&lt;/title></span>
     
-    &lt;link rel="stylesheet" media="all" href="basic.css" />
+    <span class="purple">&lt;link rel="stylesheet" media="all" href="basic.css" /></span>
 &lt;/head>
 </code></pre>
 
-		<br /><p>In the head above we have 6 meta tags giving information about your document, 1 title element with "Welcome!" as its content, and 1 link to a stylesheet.
+		<p class="info i-3"><br />In the head above there are <span class="blue">6 meta tags</span> giving information about your document, 
+			<br />there is <span class="orange">1 title element</span> with "HTML for pets" as its content, 
+			<br />and <span class="purple">1 link to a stylesheet</span>.
 		<br /><br />
 		Elements that NEVER have a content (like "LINK" or "META" or "IMG") don't need an opening AND a closing tag - though of course it is perfectly ok to write them. You can use a "shorthand" version: Instead of writing <code>&lt;img>&lt;/img></code>, you can just write <code>&lt;img /></code>.
 		<br /><br />
 		Information that is written INSIDE the opening tags is called ATTRIBUTES of the element. In the example above, the LINK tag to your stylesheet has 3 attributes: "rel", "media" and "href". We will talk about element attributes very soon.</p>
 
-			<h3>Task 3:</h3>
-			<ol type="a">
+			<p class="hideOnClick info i-3" onclick="this.style.display='none'; document.querySelectorAll('.t-3').forEach(function(content){content.style.display='block';});">Click to see more!</p>
+
+			<h3 class="task t-3">Task 3:</h3>
+			<ol type="a"  class="task t-3">
 				<li>Have you read the HEAD code above carefully? Do you sort of get what it is about? Copy and paste it into the head of your index.html page.</li>
+				<li>Can you spot where the content of the &lt;title> tag ("HTML for pets") appears in the browser?</li>
 				<li>Go ahead and make a new file called "basic.css", since you wrote in the head that the browser should link it to your "index.html" page.</li>
 				<li>Copy and paste the code below into your "basic.css" file.<br /><br />
 <pre>h1{
@@ -262,50 +302,54 @@ div{
 				<li>Add a paragraph to your "index.html" file (<code>&lt;p>Text here&lt;/p></code>), add some content (text) and then "style" that text in your "basic.css" file! You could try color, background-color, font-size, font-family, padding, margin, borders.</li>
 			</ol>
 
+			<p class="hideOnClick task t-3" onclick="this.style.display='none'; document.querySelectorAll('.i-4').forEach(function(content){content.style.display='block';});">Click to see more!</p>
+
 		
 <!-- ************************************************************************* -->
 <!-- ***** ATTRIBUTES ***** ATTRIBUTES ***** ATTRIBUTES ***** ATTRIBUTES ***** -->
 <!-- ************************************************************************* -->
 
-		<h2>4. HTML element attributes:</h2>
+		<h2 class="info i-4">4. HTML element attributes:</h2>
 
-		<p>Every HTML element can have many attributes. Some attributes are global (all elements have them), like 'id' or 'class', others are specific to certain elements, like 'href' for links or 'src' for images.</p><br />
+		<p class="info i-4">Every HTML element can have many attributes. Some attributes are global (all elements have them), like 'id' or 'class', others are specific to certain elements, like 'href' for links or 'src' for images.</p><br />
 
-<code>&lt;div <span class="blue">id="firstDiv"</span>>content&lt;/div></code>
+<code class="info i-4">&lt;div <span class="blue">id="hermione"</span>>Hermione likes Blue and Fluff.&lt;/div></code>
 
-		<br /><br /><p>Attributes always have a name and a value. In the div above 'id' is the name, "firstDiv" is the value. The pattern is always: name="value". If there is more than one attribute, you can just line them up: name1="value1" name2="value2" etc.</p><br />
+		<p class="info i-4"><br /><br />Attributes always have a name and a value. In the div above 'id' is the name, "hermione" is the value. The pattern is always: name="value". If there is more than one attribute, you can just line them up: name1="value1" name2="value2" etc.</p><br />
 		
-<code>&lt;div <span class="blue">id="firstDiv" class="bigDiv"</span>>content&lt;/div></code>
+<code class="info i-4">&lt;div <span class="blue">id="hermione" class="female"</span>>Hermione likes Blue and Fluff.&lt;/div></code>
 
-		<br /><br /><p>If there are a lot of attributes, lining them up can make it quite hard to read them. It is also allowed to put the attributes underneath each other, like so:</p><br />
+		<p class="info i-4"><br /><br />If there are a lot of attributes, lining them up can make it quite hard to read them. It is also allowed to put the attributes underneath each other, like so:</p><br />
 
-<pre><code>&lt;div <span class="blue">id="firstDiv"
-     class="bigDiv"
-     title="myLovelyDiv"
-     lang="de"
-     alt="This is the first div, it is big and I like it a lot. It is in German."
-     onclick="alert('Hoi Du alte Chueche!')"</span>>Inhalt
+<pre class="info i-4"><code>&lt;div <span class="blue">id="hermione"
+     class="female"
+     title="Hermione's favourite animals"
+     lang="en"
+     alt="This is about Hermione's two rabbits, called Blue and Fluff."
+     onclick="alert('What is the name of Hermione\'s rabbits?')"</span>>Hermione likes Blue and Fluff.
 &lt;/div></code></pre>
 
 
-<br /><p>Watch out that you do not forget the <span class='red'>&gt;</span> after the attributes. It is part of the tag, but it can get lost if there are very many attributes... 
+<p class="info i-4"><br />Watch out that you do not forget the <span class='red'>&gt;</span> after the attributes. It is part of the tag, but it can get lost if there are very many attributes... 
 <br />Here is a link to a list of all the possible attributes: <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">w3 schools HTML attributes</a></p><br />
 
-<p>One last thing for now: A HTML element can only have <span class="red">ONE id attribute value</span>, and it has to be <span class="red">unique</span>. No other element in the document is allowed to have the same id. That is the whole point of the id attribute: It makes sure that you can grab exactly the HTML element you are looking for. (There is only ONE Hermione Lovelace!)
-<br />On the other hand, a HTML element can have <span class="red">many values for the class attribute, and classes can be shared by many HTML elements</span>. (There are many Lovelaces. Several males and several females...)
+<p class="info i-4">One last thing for now: A HTML element can only have <span class="red">ONE value for its id attribute</span>, and it has to be <span class="red">unique</span>. No other element in the document is allowed to have the same id. That is the whole point of the id attribute: It makes sure that you can grab exactly the HTML element you are looking for. (There is only ONE Hermione Lovelace!)
+<br />On the other hand, a HTML element can have <span class="red">many values for the class attribute, and classes can be shared by many HTML elements</span>. (There are many Lovelaces. Several males and several females, some are grown ups and some are kids...)
 </p><br />
 
-<pre><code>&lt;div <span class="blue">id="firstDiv"
-     class="bigDiv roundDiv redDiv amazingDiv"</span>>Toll
+<pre class="info i-4"><code>&lt;div <span class="blue">id="hermione"
+     class="lovelace female child blonde"</span>>Gorgeous
 &lt;/div>
 
-&lt;div <span class="blue">id="secondDiv"
-     class="bigDiv roundDiv blueDiv boringDiv"</span>>Langweilig
+&lt;div <span class="blue">id="ida"
+     class="lovelace female grownup grey"</span>>Wise
 &lt;/div></code></pre>
 
 
-			<h3>Task 4:</h3>
-			<ol type="a">
+			<p class="hideOnClick info i-4" onclick="this.style.display='none'; document.querySelectorAll('.t-4').forEach(function(content){content.style.display='block';});">Click to see more!</p>
+
+			<h3 class="task t-4">Task 4:</h3>
+			<ol type="a" class="task t-4">
 				<li>In your "index.html" file, add a total of 9 DIV elements. Give them each an id attribute, from "one" to "nine".</li>
 				<li>Add the following classes to your DIV elements:</li>
 				<li>one, two, three: class="red"</li>
@@ -337,7 +381,7 @@ div{
 }</pre></li>
 			</ol>
 
-				<div id="explanationDot">
+				<div id="explanationDot" class="task t-4">
 				Why the dot? (.red .green .blue .fatBorder .mediumBorder .thinBorder)
 				<br />In <span class="blue">HTML</span>, you write <span class="blue">class="pinkRoses"</span>. 
 				<br />In <span class="red">CSS</span> you write <span class="red">.pinkRoses</span>. In css language, the dot means 'class'.
@@ -346,6 +390,12 @@ div{
 
 
 	</div>
+	
+	<script>
+		document.querySelectorAll(".task, .info").forEach(function(content){
+			content.style.display = "none";
+		});
+	</script>
 </body>
 </html>
 
