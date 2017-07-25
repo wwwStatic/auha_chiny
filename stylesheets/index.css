@@ -16,7 +16,10 @@ p{
 	font-size: 150%;
 	padding: 1vw 3vw;
 }
-#menu{
+body.home #menu{
+	border-bottom:  .12vw solid rgba(0,0,0,.4);
+}
+/*#menu{
 	margin: 2vw 0;
 }
 #menu li{
@@ -30,7 +33,7 @@ p{
 }
 #menu a:hover{
 	color: #e600e6;
-}
+}*/
 img{
 	width: 40vw;
 	display: inline-block;

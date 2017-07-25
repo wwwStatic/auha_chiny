@@ -1,15 +1,13 @@
 :root{
-	--python-bkg-blue: #72bfd1;
-	--python-bkg-dark-blue: #639DAF;
-	--python-menu-bkg-blue: #C8E5EC;
+	--python-bkg-dark: #639DAF;
 }
 html, body{
-  background-color: var(--python-bkg-blue);
+  background-color: var(--python-bkg);
 }
-body #menu, body #submenu, footer{
-  background-color: var(--python-menu-bkg-blue);
+body #submenu, footer{
+  background-color: var(--python-menu-bkg);
 }
 
 body.strings, body.numbers, body.lists{
-	background-color: var(--python-bkg-dark-blue);
+	background-color: var(--python-bkg-dark);
 }

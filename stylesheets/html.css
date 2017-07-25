@@ -1,19 +1,13 @@
-/* dark cyan shades:  #66FFFF, #009999, #00b3b3, #00cccc, #00e6e6, #00ffff */
-:root{
-	--html-bkg-cyan: #66FFFF;
-	--html-menu-bkg-cyan: #0000FF;
-	--html-menu-hover: #FFD8E2;
-}
 html, body{
-  background-color: var(--html-bkg-cyan);
+  background-color: var(--html-bkg);
 }
-body #menu, body #submenu, footer{
-  background-color: var(--html-menu-bkg-cyan);
+body #submenu, footer{
+  background-color: var(--html-menu-bkg);
 }
-body.html #menu a, body.html #submenu a, footer a{
-	color: var(--html-bkg-cyan);
+body.html #submenu a, footer a{
+	color: var(--html-menu-a);
 }
-body.html #menu a:hover, body.html #submenu a:hover{
+body.html #submenu a:hover{
 	color: var(--html-menu-hover);
 }
 

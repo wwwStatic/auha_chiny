@@ -55,6 +55,11 @@ w3.includeHTML = function() {
       }
 			var address = w3.root + file 
       xhttp.open("GET", address, true);
+			xhttp.onload = function () {
+			  /* Request finished. Do processing here. */
+				var menu = document.querySelector("#menu");
+				hl.currentMenu(menu);
+			};
       xhttp.send();
       return;
     }

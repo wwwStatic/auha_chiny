@@ -1,19 +1,17 @@
-:root{
-	--css-bkg-blue: #72bfd1;
-	--css-menu-bkg-blue: #C8E5EC;
-}
 html, body{
-  background-color: var(--css-bkg-blue);
+  background-color: var(--css-bkg);
 }
-body #menu, body #submenu, footer{
-  background-color: var(--css-menu-bkg-blue);
+body #submenu, footer{
+  background-color: var(--css-menu-bkg);
 }
-
 /******************************* BORDERS ***************************************/
 body.borders{
   background-color: var(--page-bkg-basic);
 }
-body.borders #menu, body.borders #submenu, body.borders footer{
+body.borders #menu li.css::before{
+	background: var(--menu-bkg-basic) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
+}
+body.borders #submenu, body.borders footer{
   background-color: var(--menu-bkg-basic);
 }
 body.borders #math{

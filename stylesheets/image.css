@@ -1,12 +1,8 @@
-:root{
-	--image-bkg-blue: #93cDdF;
-	--image-menu-bkg-blue: #c8f5ff;
-}
 html, body{
-  background-color: var(--image-bkg-blue);
+  background-color: var(--image-bkg);
 }
-body #menu, body #submenu, footer{
-  background-color: var(--image-menu-bkg-blue);
+body #submenu, footer{
+  background-color: var(--image-menu-bkg);
 }
 
 body.image .nana li{

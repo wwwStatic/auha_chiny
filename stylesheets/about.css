@@ -1,29 +1,28 @@
-:root{
-	--about-bkg-orange: #FDA428;
-	--about-menu-bkg-orange: #Ffb438;
-}
 html, body{
 	text-align: center;
-	background-color: var(--about-bkg-orange);
+	background-color: var(--about-bkg);
 }
 body{
 	position: relative;
 }
-body #menu, body #submenu, footer{
-  background-color: var(--about-menu-bkg-orange);
+body #submenu, footer{
+  background-color: var(--about-menu-bkg);
 }
 /************************************ FAMILY ************************************/
 /************************************ FAMILY ************************************/
 html, body.family{
   background-color: #00ff00;
 }
-body.family #menu, body.family #submenu{
+body.family #menu li.about::before{
+	background: deepPink linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
+}
+body.family #submenu{
   background-color: deepPink; 
 }
-body.family #menu a, body.family #submenu a{
+body.family #menu li.about a, body.family #submenu a{
   color: aliceBlue; 
 }
-body.family #menu a:hover, body.family #submenu a:hover{
+body.family #menu li.about a:hover, body.family #submenu a:hover{
   color: lawnGreen; 
 }
 body.family div.content{
