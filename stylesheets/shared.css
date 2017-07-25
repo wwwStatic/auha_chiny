@@ -1,21 +1,33 @@
 :root{
 	--page-bkg-basic: aquamarine;
+	--page-bkg-basic: hsla(160, 100%, 75%, 1);
 	--menu-bkg-basic: #00ffaa;
 	--menu-basic-a: #0000ff;
 	--menu-basic-hover: #e600e6;
-	--home-menu-bkg: aquamarine;
+	/*--home-menu-bkg: aquamarine;*/
+	--home-menu-bkg: hsla(160, 100%, 75%, 1);
 	--about-bkg: #FDA428;
-	--about-menu-bkg: #Ffb438;
+	/*--about-menu-bkg: #Ffb438;*/
+	--about-menu-bkg: hsla(211, 100%, 75%, 1);
+	--chiny-bkg: var(--page-bkg-basic);
+	/*--chiny-menu-bkg: var(--menu-bkg-basic);*/
+	--chiny-menu-bkg: hsla(262, 100%, 75%, 1);
 	--css-bkg: #72bfd1;
-	--css-menu-bkg: #C8E5EC;
+	/*--css-menu-bkg: #C8E5EC;*/
+	--css-menu-bkg: hsla(313, 100%, 75%, 1);
 	--python-bkg: #72bfd1;
-	--python-menu-bkg: #C8E5EC;
+	/*--python-menu-bkg: #C8E5EC;*/
+	--python-menu-bkg: hsla(4, 100%, 75%, 1);
 	--html-bkg: #66FFFF;
-	--html-menu-bkg: #0000FF;
-	--html-menu-a: #ccFFFF;
-	--html-menu-hover: #FFD8E2;
+	/*--html-menu-bkg: #0000FF;*/
+	--html-menu-bkg: hsla(65, 100%, 75%, 1);
+	/*--html-menu-a: #ccFFFF;
+	--html-menu-hover: #FFD8E2;*/
+	--html-menu-a: var(--menu-basic-a);
+	--html-menu-hover: var(--menu-basic-hover);
 	--image-bkg: #93cDdF;
-	--image-menu-bkg: #c8f5ff;
+	/*--image-menu-bkg: #c8f5ff;*/
+	--image-menu-bkg: hsla(116, 100%, 75%, 1);
 	--hermione-font: 'Amatic SC', cursive;
 	--nana-font: "Comic Sans MS", sans-serif;
 	--code-font: "Courier", monospace;
@@ -120,6 +132,9 @@ body{
 }
 #menu li.about::before{
 	background: var(--about-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
+}
+#menu li.chiny::before{
+	background: var(--chiny-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
 }
 #menu li.css::before{
 	background: var(--css-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
