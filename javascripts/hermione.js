@@ -5,13 +5,18 @@ var callback = function(){
 hl={
 	docReady: function(){
 	},
+	/* hl.currentMenu called when menu loaded (xhttp.onload include.js) */
 	currentMenu: function(menu){
-		document.querySelectorAll("#menu li").forEach(function(list){
+		document.querySelectorAll("#menu>li").forEach(function(list){
 			list.classList.remove("selected");
 			if(document.body.classList.contains(list.classList[0])){
 				list.classList.add("selected");
 			}
+			list.addEventListener("click", hl.expandLinkAreaToList);
 		});
+	},
+	expandLinkAreaToList: function(e){
+		window.location = e.target.firstElementChild.getAttribute("href");
 	},
 	about: {
 		calcAge: function(id, date){

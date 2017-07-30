@@ -8,26 +8,26 @@
 	--home-menu-bkg: hsla(160, 100%, 75%, 1);
 	--about-bkg: #FDA428;
 	/*--about-menu-bkg: #Ffb438;*/
-	--about-menu-bkg: hsla(211, 100%, 75%, 1);
+	--about-menu-bkg: hsla(211, 100%, 50%, 1);
 	--chiny-bkg: var(--page-bkg-basic);
 	/*--chiny-menu-bkg: var(--menu-bkg-basic);*/
-	--chiny-menu-bkg: hsla(262, 100%, 75%, 1);
+	--chiny-menu-bkg: hsla(262, 100% ,65%, 1);
 	--css-bkg: #72bfd1;
 	/*--css-menu-bkg: #C8E5EC;*/
-	--css-menu-bkg: hsla(313, 100%, 75%, 1);
+	--css-menu-bkg: hsla(300, 100%, 50%, 1);
 	--python-bkg: #72bfd1;
 	/*--python-menu-bkg: #C8E5EC;*/
-	--python-menu-bkg: hsla(4, 100%, 75%, 1);
+	--python-menu-bkg: hsla(10, 100%, 60%, 1);
 	--html-bkg: #66FFFF;
 	/*--html-menu-bkg: #0000FF;*/
-	--html-menu-bkg: hsla(65, 100%, 75%, 1);
+	--html-menu-bkg: hsla(65, 100%, 65%, 1);
 	/*--html-menu-a: #ccFFFF;
 	--html-menu-hover: #FFD8E2;*/
 	--html-menu-a: var(--menu-basic-a);
 	--html-menu-hover: var(--menu-basic-hover);
 	--image-bkg: #93cDdF;
 	/*--image-menu-bkg: #c8f5ff;*/
-	--image-menu-bkg: hsla(116, 100%, 75%, 1);
+	--image-menu-bkg: hsla(116, 100%, 50%, 1);
 	--hermione-font: 'Amatic SC', cursive;
 	--nana-font: "Comic Sans MS", sans-serif;
 	--code-font: "Courier", monospace;
@@ -109,6 +109,7 @@ body{
 	text-decoration: none;
 	margin: 0 -.3em;
 	background-color: transparent;
+	cursor: pointer;
 }
 #menu > li::before{
 	border: .12vw solid rgba(0,0,0,.4);
@@ -127,6 +128,13 @@ body{
 	transform: scale(1.1, 1.3) perspective(0.75vw) rotateX(5deg);
 	transform-origin: bottom;
 }
+#menu li.home{z-index: 10;}
+#menu li.about{z-index: 9;}
+#menu li.chiny{z-index: 8;}
+#menu li.css{z-index: 7;}
+#menu li.python{z-index: 6;}
+#menu li.html{z-index: 5;}
+#menu li.image{z-index: 4;}
 #menu li.home::before{
 	background: var(--home-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
 }
@@ -149,7 +157,7 @@ body{
 	background: var(--image-menu-bkg) linear-gradient(hsla(0,0%,100%,1), hsla(0,0%,100%,0));
 }
 #menu li.selected{
-	z-index: 2;
+	z-index: 12;
 }
 #menu li.selected::before{
 	margin-bottom: -.12vw;
