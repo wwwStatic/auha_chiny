@@ -4,6 +4,9 @@ var callback = function(){
 
 hl={
 	docReady: function(){
+		if(document.body.classList.contains("javascript") && document.body.classList.contains("index")){
+			hl.hermioneJS();
+		}
 	},
 	/* hl.currentMenu called when menu loaded (xhttp.onload include.js) */
 	currentMenu: function(menu){

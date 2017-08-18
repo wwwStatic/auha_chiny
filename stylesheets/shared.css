@@ -18,6 +18,8 @@
 	--python-bkg: #72bfd1;
 	/*--python-menu-bkg: #C8E5EC;*/
 	--python-menu-bkg: hsla(10, 100%, 60%, 1);
+	--javascript-bkg: hsla(200, 100%, 85%, 1);
+	--javascript-menu-bkg: hsla(40, 100%, 60%, 1);
 	--html-bkg: #66FFFF;
 	/*--html-menu-bkg: #0000FF;*/
 	--html-menu-bkg: hsla(65, 100%, 65%, 1);
@@ -28,7 +30,7 @@
 	--image-bkg: #93cDdF;
 	/*--image-menu-bkg: #c8f5ff;*/
 	--image-menu-bkg: hsla(116, 100%, 50%, 1);
-	--hermione-font: 'Amatic SC', cursive;
+	--hermione-font: 'Amatic SC', Times, cursive;
 	--nana-font: "Comic Sans MS", sans-serif;
 	--code-font: "Courier", monospace;
 }
@@ -133,8 +135,9 @@ body{
 #menu li.chiny{z-index: 8;}
 #menu li.css{z-index: 7;}
 #menu li.python{z-index: 6;}
-#menu li.html{z-index: 5;}
-#menu li.image{z-index: 4;}
+#menu li.javascript{z-index: 5;}
+#menu li.html{z-index: 4;}
+#menu li.image{z-index: 3;}
 #menu li.home::before{
 	background: var(--home-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
 }
@@ -149,6 +152,9 @@ body{
 }
 #menu li.python::before{
 	background: var(--python-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
+}
+#menu li.javascript::before{
+	background: var(--javascript-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));
 }
 #menu li.html::before{
 	background: var(--html-menu-bkg) linear-gradient(hsla(0,0%,100%,0.6), hsla(0,0%,100%,0));

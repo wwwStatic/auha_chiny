@@ -1,0 +1,271 @@
+:root{
+	--javascript-bkg-dark: #639DAF;
+}
+html, body{
+  background-color: var(--javascript-bkg);
+}
+body #submenu, footer{
+  background-color: var(--javascript-menu-bkg);
+}
+/*********** clocks ****************/
+body.javascript.index #clocks{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.5vw;
+}
+body.javascript.index #localTime, body.javascript.index #tzTime{
+	text-align: center;
+	margin: 0 5vw;
+}
+body.javascript.index #tzTime select{
+	font-size: 80%;
+}
+body.javascript.index .localClock, body.javascript.index .tzClock{
+	position: relative;
+	width: 12vw;
+	height: 12vw;
+	margin-top: 2vw;
+}
+body.javascript.index .clock{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 1vw solid white;
+	border-radius: 50%;
+	padding: 0.75vw;
+	box-shadow:
+		0 0 0 0.4vw rgba(0,0,0,0.1),
+		inset 0 0 0 0.3vw #efefef,
+		inset 0 0 1vw black,
+		0 0 1vw rgba(0,0,0,0.2);
+	background-image: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+body.javascript.index .clock-face{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateY(-0.15vw);
+}
+body.javascript.index .hand{
+	position: absolute;
+	width: 52%;
+	height: 0.3vw;
+	background: black;
+	top: 50%;
+	border-radius: 33% 0 0 33%;
+	transform-origin: 98%;
+	transform: rotate(90deg);
+	transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+body.javascript.index .second-hand{
+	opacity: 0.25;
+}
+body.javascript.index .hour-hand{
+	width: 42%;
+	margin-left: 10%;
+}
+body.javascript.index .clock-time{
+	position: absolute;
+	top: -0.1vw;
+	/*left: 45vw;*/
+	width: 12vw;
+	height: 12vw;
+}
+body.javascript.index .time{
+	position: absolute;
+	width: 1.25vw;
+	height: 0.2vw;
+	background: black;
+	top: 50%;
+	transform: rotate(90deg);
+	/*transform-origin: 488%;*/
+	transform-origin: 6vw;
+	transition: none;
+	opacity: 0.1;
+}
+body.javascript.index .three, body.javascript.index .six, body.javascript.index .nine, body.javascript.index .twelve{
+	opacity: 0.5;
+}
+body.javascript.index .one{
+	transform: rotate(120deg);
+}
+body.javascript.index .two{
+	transform: rotate(150deg);
+}
+body.javascript.index .three{
+	transform: rotate(180deg);
+}
+body.javascript.index .four{
+	transform: rotate(210deg);
+}
+body.javascript.index .five{
+	transform: rotate(240deg);
+}
+body.javascript.index .six{
+	transform: rotate(270deg);
+}
+body.javascript.index .seven{
+	transform: rotate(300deg);
+}
+body.javascript.index .eight{
+	transform: rotate(330deg);
+}
+body.javascript.index .nine{
+	transform: rotate(0deg);
+}
+body.javascript.index .ten{
+	transform: rotate(30deg);
+}
+body.javascript.index .eleven{
+	transform: rotate(60deg);
+}
+/************ timezone areas ***************/
+body.javascript.index #AKSTm9{
+	fill: hsla(200, 65%, 50%, 1);
+}
+body.javascript.index #AKSTm9:hover, body.javascript.index #AKSTm9.selectedTZ{
+	fill: hsla(200, 100%, 50%, 1);
+}
+body.javascript.index #PSTm8{
+	fill: hsla(20, 75%, 50%, 1);
+}
+body.javascript.index #PSTm8:hover, body.javascript.index #PSTm8.selectedTZ{
+	fill: hsla(20, 100%, 50%, 1);
+}
+body.javascript.index #MSTm7{
+	fill: hsla(50, 75%, 66%, 1);
+}
+body.javascript.index #MSTm7:hover, body.javascript.index #MSTm7.selectedTZ{
+	fill: hsla(50, 100%, 66%, 1);
+}
+body.javascript.index #CSTm6{
+	fill: hsla(80, 75%, 50%, 1);
+}
+body.javascript.index #CSTm6:hover, body.javascript.index #CSTm6.selectedTZ{
+	fill: hsla(80, 100%, 50%, 1);
+}
+
+body.javascript.index #ESTm5{
+	fill: hsla(200, 65%, 50%, 1);
+}
+body.javascript.index #ESTm5:hover, body.javascript.index #ESTm5.selectedTZ{
+	fill: hsla(200, 100%, 50%, 1);
+}
+body.javascript.index #ASTm4{
+	fill: hsla(20, 75%, 50%, 1);
+}
+body.javascript.index #ASTm4:hover, body.javascript.index #ASTm4.selectedTZ{
+	fill: hsla(20, 100%, 50%, 1);
+}
+body.javascript.index #BRTm3{
+	fill: hsla(50, 75%, 66%, 1);
+}
+body.javascript.index #BRTm3:hover, body.javascript.index #BRTm3.selectedTZ{
+	fill: hsla(50, 100%, 66%, 1);
+}
+body.javascript.index #UTC{
+	fill: hsla(80, 75%, 50%, 1);
+}
+body.javascript.index #UTC:hover, body.javascript.index #UTC.selectedTZ{
+	fill: hsla(80, 100%, 50%, 1);
+}
+
+body.javascript.index #CETp1{
+	fill: hsla(200, 65%, 50%, 1);
+}
+body.javascript.index #CETp1:hover, body.javascript.index #CETp1.selectedTZ{
+	fill: hsla(200, 100%, 50%, 1);
+}
+body.javascript.index #EETp2{
+	fill: hsla(20, 75%, 50%, 1);
+}
+body.javascript.index #EETp2:hover, body.javascript.index #EETp2.selectedTZ{
+	fill: hsla(20, 100%, 50%, 1);
+}
+body.javascript.index #MSKp3{
+	fill: hsla(50, 75%, 66%, 1);
+}
+body.javascript.index #MSKp3:hover, body.javascript.index #MSKp3.selectedTZ{
+	fill: hsla(50, 100%, 66%, 1);
+}
+body.javascript.index #IRSTp330{
+	fill: hsla(65, 75%, 50%, 1);
+}
+body.javascript.index #IRSTp330:hover, body.javascript.index #IRSTp330.selectedTZ{
+	fill: hsla(65, 100%, 50%, 1);
+}
+body.javascript.index #YEKTp5{
+	fill: hsla(80, 75%, 50%, 1);
+}
+body.javascript.index #YEKTp5:hover, body.javascript.index #YEKTp5.selectedTZ{
+	fill: hsla(80, 100%, 50%, 1);
+}
+
+body.javascript.index #ISTp530{
+	fill: hsla(149, 75%, 50%, 1);
+}
+body.javascript.index #ISTp530:hover, body.javascript.index #ISTp530.selectedTZ{
+	fill: hsla(140, 100%, 50%, 1);
+}
+body.javascript.index #OMSTp6{
+	fill: hsla(200, 65%, 50%, 1);
+}
+body.javascript.index #OMSTp6:hover, body.javascript.index #OMSTp6.selectedTZ{
+	fill: hsla(200, 100%, 50%, 1);
+}
+body.javascript.index #NOVTp7{
+	fill: hsla(20, 75%, 50%, 1);
+}
+body.javascript.index #NOVTp7:hover, body.javascript.index #NOVTp7.selectedTZ{
+	fill: hsla(20, 100%, 50%, 1);
+}
+body.javascript.index #CSTp8{
+	fill: hsla(50, 75%, 66%, 1);
+}
+body.javascript.index #CSTp8:hover, body.javascript.index #CSTp8.selectedTZ{
+	fill: hsla(50, 100%, 66%, 1);
+}
+body.javascript.index #JSTp9{
+	fill: hsla(80, 75%, 50%, 1);
+}
+body.javascript.index #JSTp9:hover, body.javascript.index #JSTp9.selectedTZ{
+	fill: hsla(80, 100%, 50%, 1);
+}
+
+body.javascript.index #EATp10{
+	fill: hsla(200, 65%, 50%, 1);
+}
+body.javascript.index #EATp10:hover, body.javascript.index #EATp10.selectedTZ{
+	fill: hsla(200, 100%, 50%, 1);
+}
+body.javascript.index #MAGTp11{
+	fill: hsla(20, 75%, 50%, 1);
+}
+body.javascript.index #MAGTp11:hover, body.javascript.index #MAGTp11.selectedTZ{
+	fill: hsla(20, 100%, 50%, 1);
+}
+body.javascript.index #NZSTp12{
+	fill: hsla(50, 75%, 66%, 1);
+}
+body.javascript.index #NZSTp12:hover, body.javascript.index #NZSTp12.selectedTZ{
+	fill: hsla(50, 100%, 66%, 1);
+}
+
+body.javascript.index .city{
+	fill: black;
+	cursor: pointer;
+}
+body.javascript.index .selectedCity{
+	stroke: white;
+	stroke-width: 20;
+	animation: pulsate 1s linear infinite;
+}
+@keyframes pulsate {
+  from { opacity: 1; }
+  50% { opacity: 0.25; }
+  to { opacity: 1; }
+}
