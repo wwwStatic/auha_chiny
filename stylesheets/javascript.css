@@ -261,7 +261,7 @@ body.javascript.index .city{
 }
 body.javascript.index .selectedCity{
 	stroke: white;
-	stroke-width: 20;
+	stroke-width: 30;
 	animation: pulsate 1s linear infinite;
 }
 @keyframes pulsate {
