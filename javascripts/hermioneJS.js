@@ -12,7 +12,7 @@ hl.hermioneJS = function(){
 			//hl.cityList.push(content.id.split(/(?=[A-Z]+[^A-Z]?)/).join("_"));
 			content.classList.add("city");
 		  var title = document.createElementNS("http://www.w3.org/2000/svg","title");
-		  title.textContent = content.id;
+			title.textContent = hl.cities[hl.cityIDs.indexOf(content.id)]
 		  content.appendChild(title);
 		}
 	});
