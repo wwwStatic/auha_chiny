@@ -59,14 +59,13 @@ hl.hermioneJS = function(){
 hl.cityClicked = function(event){
 	var elementID = event.target.parentElement.id;
 	var clickedElement = document.getElementById(elementID);
-	var indexOfSelected = hl.cityIDs.indexOf(elementID)
-	var timezone = hl.timezones[hl.selectTZ.selectedIndex];
 	for(var j=0; j<hl.orderedCities.length; j++){
 		if(hl.orderedCities[j][2]==elementID){
 			var cityIndex = j;
 		}
 	}
 	hl.selectTZ.selectedIndex = cityIndex+1;
+	var timezone = hl.orderedCities[cityIndex][1];
 	hl.timeZoneSelected(clickedElement, timezone);	
 }
 hl.citySelected = function(event){
