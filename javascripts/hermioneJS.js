@@ -41,7 +41,7 @@ hl.hermioneJS = function(){
 	hl.orderedCities.sort();
 	const optPrompt = document.createElement('option');
   optPrompt.value = "none";
-  optPrompt.innerHTML = "Please select a city";
+  optPrompt.innerHTML = "City (select or click)";
 	hl.selectTZ.appendChild(optPrompt);
 	for (var i = 0; i<hl.orderedCities.length; i++){
 	    var opt = document.createElement('option');
